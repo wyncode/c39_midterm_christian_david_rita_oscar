@@ -5,6 +5,7 @@ import CharacterIndex from './components/CharacterIndex/CharacterIndex';
 import LandingPage from './components/LandingPage/LandingPage';
 
 import './App.css';
+import CharacterFile from './components/CharacterFile/CharacterFile';
 
 const App = () => {
   const [serverMessage, setServerMessage] = useState('');
@@ -25,6 +26,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/character-index" component={CharacterIndex} />
+          <Route exact path='/character-file' component={CharacterFile} />
         </Switch>
       </BrowserRouter>
     </div>

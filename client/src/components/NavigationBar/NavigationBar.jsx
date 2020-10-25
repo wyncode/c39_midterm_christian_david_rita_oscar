@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
+import './NavigationBar.css';
 
 function NavigationBar() {
   return (
@@ -9,15 +10,12 @@ function NavigationBar() {
         alt="logo"
       />
       <Nav className="navbar" defaultActiveKey="/home" as="ul">
-
         <Nav.Item as="li">
-          <Nav.Link href="/">Home
-          </Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
         </Nav.Item>
 
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-1">Meet the Team
-          </Nav.Link>
+          <Nav.Link eventKey="link-1">Meet the Team</Nav.Link>
         </Nav.Item>
 
         <Nav.Item as="li">
@@ -31,10 +29,7 @@ function NavigationBar() {
         </Nav.Item>
 
         <Nav.Item as="li">
-          <Nav.Link
-            eventKey="link-3"
-            className="gamestart"
-            href="/gamestart" >
+          <Nav.Link eventKey="link-3" className="gamestart" href="/game-start">
             Game Start
           </Nav.Link>
         </Nav.Item>

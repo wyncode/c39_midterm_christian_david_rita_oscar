@@ -1,0 +1,23 @@
+.navbarDiv {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbarDiv img {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  left: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 2px solid black; */
+}
+
+.character-index {
+  border: 2px solid blue;
+  border-radius: 12px;
+}

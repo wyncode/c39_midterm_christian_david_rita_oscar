@@ -1,0 +1,75 @@
+.filecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  margin-top: 200px;
+  margin-bottom: 250px;
+  height: 700px;
+  width: 1200px;
+}
+
+.filecard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+  margin: 0px;
+  padding: 30px;
+  width: 100%;
+}
+
+.carddata {
+  background-color: beige;
+  display: flex;
+  justify-content: space-around;
+  border: 5px solid black;
+}
+
+.leftfilecard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.rightfilecard {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.characterdata {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  border: 5px solid black;
+}
+
+.quotecontainer {
+  justify-content: space-between;
+  display: flex;
+  margin: 0px;
+  padding: 10px;
+  width: 100%;
+}
+
+.quotebox {
+  display: flex;
+  flex-direction: column;
+}
+
+.quotebutton {
+  display: flex;
+  background-color: green;
+  color: white;
+  border: 2px black solid;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.cardImage {
+  background-color: coral;
+}

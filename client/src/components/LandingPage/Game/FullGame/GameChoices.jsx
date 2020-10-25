@@ -1,4 +1,5 @@
 import React from 'react';
+import './GameChoices.css';
 
 function GameChoices() {
   return (

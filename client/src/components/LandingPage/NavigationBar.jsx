@@ -19,7 +19,7 @@ function NavigationBar() {
           <Nav.Link
             eventKey="link-2"
             className="character-index"
-            href="/character-index"
+            href="/characters"
           >
             Character Index
           </Nav.Link>

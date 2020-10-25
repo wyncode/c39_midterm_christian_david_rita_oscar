@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import NavigationBar from './components/LandingPage/NavigationBar';
 import CharacterIndex from './components/CharacterIndex/CharacterIndex';
 import LandingPage from './components/LandingPage/LandingPage';
+import GameStart from './components/Game/GameStart';
 
 import './App.css';
 
@@ -25,6 +26,8 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/character-index" component={CharacterIndex} />
+          <Route exact path="/gamestart" component={GameStart} />
+
         </Switch>
       </BrowserRouter>
     </div>

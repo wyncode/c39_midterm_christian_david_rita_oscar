@@ -9,12 +9,17 @@ function NavigationBar() {
         alt="logo"
       />
       <Nav className="navbar" defaultActiveKey="/home" as="ul">
+
         <Nav.Item as="li">
-          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/">Home
+          </Nav.Link>
         </Nav.Item>
+
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-1">Meet the Team</Nav.Link>
+          <Nav.Link eventKey="link-1">Meet the Team
+          </Nav.Link>
         </Nav.Item>
+
         <Nav.Item as="li">
           <Nav.Link
             eventKey="link-2"
@@ -24,6 +29,16 @@ function NavigationBar() {
             Character Index
           </Nav.Link>
         </Nav.Item>
+
+        <Nav.Item as="li">
+          <Nav.Link
+            eventKey="link-3"
+            className="gamestart"
+            href="/gamestart" >
+            Game Start
+          </Nav.Link>
+        </Nav.Item>
+
         <Nav.Item></Nav.Item>
       </Nav>
     </div>

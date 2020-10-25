@@ -1,6 +1,7 @@
 import React from 'react';
-import LandingPage from '../components/LandingPage/LandingPage';
-import FullGame from '../components/Game/FullGame';
+import LandingPage from '../LandingPage/LandingPage';
+import FullGame from '../LandingPage/Game/FullGame/FullGame';
+import './FullHomePage.css';
 
 function FullHomePage() {
   return (

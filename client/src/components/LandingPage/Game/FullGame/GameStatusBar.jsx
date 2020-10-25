@@ -1,4 +1,5 @@
 import React from 'react';
+import './GameStatusBar.css';
 
 function GameStatusBar() {
   return (

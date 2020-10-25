@@ -6,6 +6,7 @@ import FullHomePage from './components/FullHomePage';
 import TestComponent from './components/Game/TestComponent';
 
 import './App.css';
+import CharacterFile from './components/CharacterFile/CharacterFile';
 
 const App = () => {
   const [serverMessage, setServerMessage] = useState('');
@@ -26,6 +27,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={FullHomePage} />
           <Route exact path="/characters" component={CharacterIndex} />
+        <Route exact path='/character-file' component={CharacterFile} />
         </Switch>{' '}
       </BrowserRouter>
       <TestComponent />

@@ -1,3 +1,6 @@
+
+
+
 .gamestart {
   padding: 50px;
 }
@@ -12,7 +15,10 @@
   border-radius: 25px;
 }
 
-.startquiz {
+h1 {
+  display: flex;
+  justify-content: center;
+  
 }
 
 h2 {
@@ -27,7 +33,7 @@ h2 {
   border-radius: 25px;
   font-family: sans-serif;
   padding: 20px;
-  color: white;
+  color: black;
   font-size: 20px;
 }
 

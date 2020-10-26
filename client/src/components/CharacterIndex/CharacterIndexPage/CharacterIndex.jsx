@@ -911,7 +911,6 @@ const CharacterIndex = () => {
     }
     // setCharacter(response[Math.floor(Math.random() * charArray.length)]);
     setCharacter(charArray);
-    console.log(character);
   };
 
   // set timeout to get image to render
@@ -931,14 +930,21 @@ const CharacterIndex = () => {
   return (
     <div>
       <h1>CharacterIndex Page</h1>
-      <div className="character-card">
+      {/* <div className="character-card">
         <h3>{character[2].name}</h3>
 
-        <img src={character[2].img} />
-        <button onClick={() => handleClick()}>Click Me</button>
+        <img src={character[2].img} /> */}
 
-        <div>
-          {/* {async function fillArray() {
+      <div>
+        {character.map((character) => {
+          return (
+            <div>
+              <h5>{character.name}</h5>
+            </div>
+          );
+        })}
+        <button onClick={() => handleClick()}>Click Me</button>
+        {/* {async function fillArray() {
             let response = await fetch(
               'https://breakingbadapi.com/api/characters'
             );
@@ -951,7 +957,6 @@ const CharacterIndex = () => {
             return <h1>hello</h1>;
             // return the actual array as state to pass it down here?
           }} */}
-        </div>
       </div>
     </div>
   );

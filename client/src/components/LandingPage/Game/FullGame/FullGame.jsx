@@ -6,7 +6,6 @@ import './FullGame.css';
 function FullGame() {
   return (
     <div className="full-game">
-      <GameStatusBar />
       <GameChoices />
     </div>
   );

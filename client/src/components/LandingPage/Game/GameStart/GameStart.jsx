@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './GameStart.css';
 
 const GameStart = () => {
@@ -29,9 +30,7 @@ const GameStart = () => {
           </ol>
         </div>
         <div class="box">
-          <button class="startgame" href="./game-url">
-            START
-          </button>
+          <a href="./LandingPage/Game/FullGame/FullGame" class="startgame" >START</a>
         </div>
       </div>
     </div>

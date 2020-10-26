@@ -23,11 +23,13 @@ h2 {
 }
 
 .rulesbox {
-  border: 5px solid black;
+  /* border: 5px solid black; */
+  /* box-shadow: 20px 20px 20px 20px rgba(0.2, 0.2, 0.2, 0.2),
+    20px 20px 20px 20px rgba(0.2, 0.2, 0.2, 0.19); */
   border-radius: 25px;
   font-family: sans-serif;
   padding: 20px;
-  color: white;
+  color: black;
   font-size: 20px;
 }
 
@@ -41,8 +43,8 @@ h2 {
 }
 
 #arrow {
-  height: 15px;
-  width: 15px;
+  height: 25px;
+  width: 25px;
 }
 
 .startgame {

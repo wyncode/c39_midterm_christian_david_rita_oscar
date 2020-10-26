@@ -1,8 +1,47 @@
-import React, { useState, useEffect } from 'react';
-import { Form, Dropdown, ButtonGroup, Button, Card } from 'react-bootstrap';
-import CharacterCard from '../CharacterCard/CharacterCard';
+import CharacterIndexSearchBar from './CharacterIndexSearchBar';
+import React, { useEffect, useState } from 'react';
+import './CharacterIndex.css';
+
+const CharacterIndex = () => {
+  const [state, setState] = useState({});
+
+  const handleClick = async () => {
+    // console.log(state);
+    let response = await fetch(
+      'https://breakingbadapi.com/api/character/random'
+    );
+    response = await response.json();
+    setState(response[0]);
+  };
+  // set timeout to get image to render
+  // console.log(state);
+
+  useEffect(() => {
+    console.log('use effect has run');
+  }, [state]);
+
+  return (
+    <div>
+      <h1>CharacterIndex Page</h1>
+      <div className="character-card">
+        <h3>{state.name}</h3>
+
+        <img src={state.img} />
+        <button onClick={() => handleClick()}>Click Me</button>
+      </div>
+    </div>
+  );
+};
+
+export default CharacterIndex;
+
+// import React, { useState, useEffect } from 'react';
+// import { Form, Dropdown, ButtonGroup, Button, Card } from 'react-bootstrap';
+// import CharacterCard from '../CharacterCard/CharacterCard';
+// import CharacterIndexSearchBar from './CharacterIndexSearchBar';
 
 // const CharacterIndex = () => {
+
 //   const [apiData, setApiData] = useState({});
 //   const [state, setState] = useState(true);
 
@@ -67,37 +106,60 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 
 // remove broken api characters
 
-const CharacterIndex = () => {
-  const [apiData, setApiData] = useState({});
-  const [state, setState] = useState(true);
+// clear search bar after submit
 
-  const getAllCharacters = async function getAllCharacters() {
-    let characters = await fetch('https://breakingbadapi.com/api/characters');
-    characters = await characters.json();
-    let allCharacters = characters.map((character) => character);
-    console.log(allCharacters);
-  };
+// const CharacterIndex = () => {
+// const [apiData, setApiData] = useState({});
+// const [state, setState] = useState(true);
 
-  getAllCharacters();
+// const getAllCharacters = async function getAllCharacters() {
+//   let characters = await fetch('https://breakingbadapi.com/api/characters');
+//   characters = await characters.json();
+//   let allCharacters = characters.map((character) => character);
+// allCharacters.map((character) => console.log(character.name));
+// };
+// getAllCharacters();
+// useEffect(() => {
+//   fetch('https://breakingbadapi.com/api/character/random')
+//     .then((response) => response.json())
+//     .then((response) => setApiData(response[0]));
+// }, [state]);
 
-  useEffect(() => {
-    fetch('https://breakingbadapi.com/api/character/random')
-      .then((response) => response.json())
-      .then((response) => setApiData(response[0]));
-  }, [state]);
+// function switchCharacter() {
+//   setState(!state);
+// }
 
-  function switchCharacter() {
-    setState(!state);
-  }
+//   const [characterSearch, setCharacterSearch] = useState('Saul');
+//   const [apiData, setApiData] = useState({});
 
-  return (
-    <div>
-      <CharacterCard />
-      <Button variant="primary" onClick={() => switchCharacter()}>
-        Switch Character
-      </Button>
-    </div>
-  );
-};
+//   function handleSearch(event) {
+//     event.preventDefault();
+//     setCharacterSearch(event.target.elements[0].value);
+//   }
 
-export default CharacterIndex;
+//   useEffect(() => {
+//     async function getCharacterData() {
+//       let response = await fetch(
+//         `https://breakingbadapi.com/api/characters?name=Walter` //interpolate variable
+//       );
+//       response = await response.json();
+//       setApiData(response);
+//       // console.log(apiData);
+//     }
+//     getCharacterData();
+//   }, [characterSearch]);
+
+//   return (
+//     <div>
+//       <CharacterIndexSearchBar handleSearchProp={handleSearch} />
+//       <CharacterCard
+//         name={characterSearch.name}
+//         imageURL={
+//           'https://images-na.ssl-images-amazon.com/images/I/61ec6C1F2yL._AC_SX466_.jpg'
+//         }
+//       />
+//     </div>
+//   );
+// };
+
+// export default CharacterIndex;

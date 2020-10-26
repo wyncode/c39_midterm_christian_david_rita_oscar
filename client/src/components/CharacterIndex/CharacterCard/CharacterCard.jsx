@@ -1,17 +1,17 @@
 import React from 'react';
 import { Form, Dropdown, ButtonGroup, Button, Card } from 'react-bootstrap';
 
-function CharacterCard() {
+function CharacterCard(props) {
   return (
     <div>
-      <Card style={{ width: '18rem' }} className="character-card">
+      <Card style={{ width: '18rem' }}>
         <Card.Img
           className="character-image"
           variant="top"
-          src="https://images.halloweencostumes.com/products/43389/1-2/cactus-costume-for-adults.jpg"
+          src={props.imageURL}
         />
         <Card.Body>
-          <Card.Title>Name Here</Card.Title>
+          <Card.Title>{props.name}</Card.Title>
           <Button variant="primary">Learn More</Button>
         </Card.Body>
       </Card>

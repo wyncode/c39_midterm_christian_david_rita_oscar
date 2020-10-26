@@ -20,6 +20,53 @@ const CharacterIndex = () => {
     console.log('use effect has run');
   }, [state]);
 
+  let namesArray = ['Walter', 'Skylar', 'Gus'];
+
+  let characterArray = [
+    {
+      char_id: 45,
+      name: 'Tomás Cantillo',
+      birthday: null,
+      occupation: ['Kid', ' Gang member for a rival dealer in ABQ'],
+      img:
+        'https://vignette.wikia.nocookie.net/breakingbad/images/e/ec/Tomas.png/revision/latest?cb=20130131043014',
+      status: 'Deceased',
+      nickname: "Andrea's brother",
+      appearance: [2, 3],
+      portrayed: 'Angelo Martinez',
+      category: 'Breaking Bad',
+      better_call_saul_appearance: null
+    },
+    {
+      char_id: 56,
+      name: 'Officer Saxton',
+      birthday: null,
+      occupation: ['APD Officer'],
+      img:
+        'https://vignette.wikia.nocookie.net/breakingbad/images/f/f3/Officer_Saxton_-_I.F.T..png/revision/latest?cb=20131025090606',
+      status: 'Alive',
+      nickname: 'Saxton',
+      appearance: [3],
+      portrayed: 'Stoney Westmoreland',
+      category: 'Breaking Bad',
+      better_call_saul_appearance: null
+    },
+    {
+      char_id: 52,
+      name: 'Kaylee Ehrmantraut',
+      birthday: null,
+      occupation: ['Kid'],
+      img:
+        'https://vignette.wikia.nocookie.net/breakingbad/images/c/cc/Kaylee.png/revision/latest?cb=20170810082843',
+      status: 'Alive',
+      nickname: "Mike's Granddaughter",
+      appearance: [3, 5],
+      portrayed: 'Kaija Rose Bales',
+      category: 'Breaking Bad',
+      better_call_saul_appearance: null
+    }
+  ];
+
   return (
     <div>
       <h1>CharacterIndex Page</h1>
@@ -28,6 +75,14 @@ const CharacterIndex = () => {
 
         <img src={state.img} />
         <button onClick={() => handleClick()}>Click Me</button>
+        <div>
+          {characterArray.map((character) => (
+            <div>
+              <h1>{character.name}</h1>
+              <img src={character.img} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

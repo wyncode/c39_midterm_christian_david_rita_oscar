@@ -67,8 +67,40 @@ const [quote, setQuote] = useState();
 
         },[])
 
+        
+
+          console.log("hello");
+          
+            // let answer;
+        
+            // answer= [name, nameOne, nameTwo, nameThree];
+            // console.log(answer);
+            // answer.sort(function() { return 0.5 - Math.random() });
+            // console.log(answer);
+            // console.log(answer[0]);
+            // console.log(answer[1]);
+            // console.log(answer[2]);
+            // console.log(answer[3]);
+
+            // console.log("hello");
+          
+            let answer;
+        
+            answer= [[name, image], [nameOne, imageOne], [nameTwo, imageTwo], [nameThree, imageThree]];
+            console.log(answer);
+            answer.sort(function() { return 0.5 - Math.random() });
+            console.log(answer);
+            console.log(answer[0]);
+            console.log(answer[1]);
+            console.log(answer[2]);
+            console.log(answer[3]);
+
+            console.log("hello");
+       
 
   return (
+
+  
     <div>
       <h1>Test Your Knowledge</h1>
       <h3>Question 1</h3>
@@ -81,31 +113,34 @@ const [quote, setQuote] = useState();
         </div>
       </div>
 
-
     <div className="game-options-container">
       <div className="options-row options-one">
         <div className="game-option option-one">
-          <h3>{name}</h3>
-          <img src={image} alt="random character from Breaking Bad for user to select from"/>
+          <h3>{answer[0].[0]}</h3>
+          <img src={answer[0].[1]} alt="random character from Breaking Bad for user to select from"/>
         </div>
         <div className="game-option option-two">
-          <h3>{nameOne}</h3>
-          <img src={imageOne} alt="random character from Breaking Bad for user to select from"/>
+          <h3>{answer[1].[0]}</h3>
+          <img src={answer[1].[1]} alt="random character from Breaking Bad for user to select from"/>
         </div>
       </div>
       <div className="options-row options-three">
         <div className="game-option option-one">
-          <h3>{nameTwo}</h3>
-          <img src={imageTwo} alt="random character from Breaking Bad for user to select from"/>
+          <h3>{answer[2].[0]}</h3>
+          <img src={answer[2].[1]} alt="random character from Breaking Bad for user to select from"/>
         </div>
         <div className="game-option option-four">
-          <h3>{nameThree}</h3>
-          <img src={imageThree} alt="random character from Breaking Bad for user to select from"/>
+          <h3>{answer[3].[0]}</h3>
+          <img src={answer[3].[1]} alt="random character from Breaking Bad for user to select from"/>
         </div>
       </div>
     </div>
     </div>
   );
+
 }
 
+
 export default GameChoices;
+
+

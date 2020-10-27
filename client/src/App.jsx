@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar/NavigationBar';
-import CharacterIndex from './components/CharacterIndex/CharacterIndex';
+import CharacterIndex from './components/CharacterIndex/CharacterIndexPage/CharacterIndex';
 import FullHomePage from './components/FullHomePage/FullHomePage';
 import GameStart from './components/LandingPage/Game/GameStart/GameStart';
 

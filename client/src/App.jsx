@@ -5,6 +5,8 @@ import CharacterIndex from './components/CharacterIndex/CharacterIndexPage/Chara
 import FullHomePage from './components/FullHomePage/FullHomePage';
 import GameStart from './components/LandingPage/Game/GameStart/GameStart';
 
+
+
 import './App.css';
 import CharacterFile from './components/CharacterFile/CharacterFile';
 

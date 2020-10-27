@@ -1,10 +1,14 @@
 import React from 'react';
+// add appropriate alt tags
 
 function TestCharPage(props) {
   return (
     <div>
-      <h1>{props.name}</h1>
+      <h1>Walter White</h1>
       <p> Character Description</p>
+      <button type="button" class="btn btn-primary">
+        Primary
+      </button>
     </div>
   );
 }

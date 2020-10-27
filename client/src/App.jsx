@@ -4,6 +4,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import CharacterIndex from './components/CharacterIndex/CharacterIndexPage/CharacterIndex';
 import FullHomePage from './components/FullHomePage/FullHomePage';
 import GameStart from './components/LandingPage/Game/GameStart/GameStart';
+import GameChoices from './components/LandingPage/Game/FullGame/GameChoices';
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
           <Route exact path="/characters" component={CharacterIndex} />
           <Route exact path="/character-file" component={CharacterFile} />
           <Route exact path="/game-start" component={GameStart} />
+          <Route exact path="/lets-play" component={GameChoices} />
         </Switch>{' '}
       </BrowserRouter>
     </div>

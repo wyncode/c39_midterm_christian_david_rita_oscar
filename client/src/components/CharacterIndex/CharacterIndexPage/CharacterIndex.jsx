@@ -13,17 +13,53 @@ import CharacterFile from '../../CharacterFile/CharacterFile';
 // creat if statements to account for characters whose ids are out of order
 // get rid of auto-0render walter before character index page loads
 
+// filter out characters that don't match user's selected season input
+
+// give user dropdown button with options to check seasons, then click "apply".
+// "Apply" should submit a form that populates an array (fills empty array, or replaces array [1, 2, 3, 4, 5])
+// function should have a for loop that iterates over seasons array, and for each season, another for loop which
+// iterates over the API response array of full characters
+// for each character, if their "appearances" property contains the season, that character object should be added to a "toAppear" array
+// the "to Appear" should repalce the charArray as current state
+
 const CharacterIndex = () => {
-  const [character, setCharacter] = useState([]);
+  const [characterList, setCharacterList] = useState([]);
   const [state, setState] = useState(true);
 
+  let seasonsFilter = [5];
+
+  const filterSeasons = () => {
+    seasonsFilter.forEach((season) => {
+      // console.log(season);
+      characterList.forEach((character) => {
+        if (
+          character.appearance !== null &&
+          character.appearance.includes(season)
+        ) {
+          console.log(`${season}: ${character.name}`);
+        }
+      });
+    });
+  };
+  //     for (let i = 0; i < seasonsFilter.length; i++) {
+  //       for (let i = 0; i < characterList.length; i++) {
+  //         if (characterList.appearance.includes(season)) {
+  //           console.log(`${season}: ${characterList.name}`);
+  //         }
+  //       }
+  //     }
+  //   });
+  // };
+
+  filterSeasons();
+
   const sortAToZ = () => {
-    setCharacter(character.sort((a, b) => (a.name > b.name ? 1 : -1)));
+    setCharacterList(characterList.sort((a, b) => (a.name > b.name ? 1 : -1)));
     setState(!state);
   };
 
   const sortZToA = () => {
-    setCharacter(character.sort((a, b) => (a.name > b.name ? -1 : 1)));
+    setCharacterList(characterList.sort((a, b) => (a.name > b.name ? -1 : 1)));
     setState(!state);
   };
 
@@ -34,26 +70,26 @@ const CharacterIndex = () => {
     for (let i = 0; i < response.length; i++) {
       charArray.push(response[i]);
     }
-    setCharacter(charArray);
+    setCharacterList(charArray);
   }, []);
 
   return (
-    <div class="character-index-page-container">
+    <div className="character-index-page-container">
       <h1>CharacterIndex Page</h1>
-      <div class="buttons-container">
+      <div className="buttons-container">
         <button onClick={() => sortAToZ()}>Sort A -> Z</button>
         <button onClick={() => sortZToA()}>Sort Z -> A</button>
       </div>
 
-      <div class="character-cards-container">
-        {character.map((character) => {
+      <div className="character-cards-container">
+        {characterList.map((character) => {
           return (
             <a href={`/character-file/${character.char_id}`}>
               <div className="character-card">
                 <h5>{character.name}</h5>
 
                 <img
-                  class="character-image"
+                  className="character-image"
                   src={character.img}
                   alt={character.name}
                 />

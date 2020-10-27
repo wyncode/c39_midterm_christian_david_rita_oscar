@@ -28,6 +28,8 @@ const CharacterIndex = () => {
 
   let seasonsFilter = [5];
 
+  // creat dop
+
   const filterSeasons = () => {
     seasonsFilter.forEach((season) => {
       // console.log(season);
@@ -41,15 +43,6 @@ const CharacterIndex = () => {
       });
     });
   };
-  //     for (let i = 0; i < seasonsFilter.length; i++) {
-  //       for (let i = 0; i < characterList.length; i++) {
-  //         if (characterList.appearance.includes(season)) {
-  //           console.log(`${season}: ${characterList.name}`);
-  //         }
-  //       }
-  //     }
-  //   });
-  // };
 
   filterSeasons();
 

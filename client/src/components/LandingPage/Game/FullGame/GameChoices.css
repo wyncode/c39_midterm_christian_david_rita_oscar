@@ -14,10 +14,20 @@
   border: 4px solid black;
   border-radius: 10px;
   overflow: hidden;
-  transition: all 250ms ease-out 0s;
+  transition: all 750ms ease-out 0s;
 }
 
 .game-option:hover {
-  border: 4px solid blue;
-  transition: all 250ms ease-out 0s;
+  border: 4px solid yellow;
+  transition: all 750ms ease-out 0s;
+}
+
+button:hover {
+  color: yellow;
+  transform: scale(1.1);
+  -moz-box-shadow: 3px 3px 50px 30px #ccc;
+  -webkit-box-shadow: 3px 3px 50px 30px #ccc;
+  -o-box-shadow: 3px 3px 50px 30px #ccc;
+  -ms-box-shadow: 3px 3px 50px 30px #ccc;
+  box-shadow: 3px 3px 50px 30px #ccc;
 }

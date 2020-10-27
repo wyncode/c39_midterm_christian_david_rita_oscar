@@ -13,6 +13,41 @@ const [imageThree, setImageThree] = useState();
 const [nameThree, setNameThree] = useState();
 const [quote, setQuote] = useState();
 
+// rightOrWrong = () => {
+//   for(answer[0].[0] || answer[0].[1] === randomAuthor){
+//       return correct = () => {
+//         // async?
+//         counter = () => {
+//           (let i=0; i<2; i++)
+//           i++;} &&
+//         //await?
+//         secondQuestion = () => {
+
+//         }
+//         //counter ++
+
+//       }
+//   };
+// };
+
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    <div>
+      The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.    
+	</div>
+  );
+}
+
+
+async awaitJavascript By MM.Mirzaei.Dev on Aug 6 2020
+async function showAvatar() {
+	// read
+  	await setTimeout(resolve, 3000);
+    // read next 3s
+}
+
+    //if counter = 2
+    // send to start page again
 
   let randomQuote;
   let randomAuthor;
@@ -66,23 +101,6 @@ const [quote, setQuote] = useState();
             }))
 
         },[])
-
-        
-
-          console.log("hello");
-          
-            // let answer;
-        
-            // answer= [name, nameOne, nameTwo, nameThree];
-            // console.log(answer);
-            // answer.sort(function() { return 0.5 - Math.random() });
-            // console.log(answer);
-            // console.log(answer[0]);
-            // console.log(answer[1]);
-            // console.log(answer[2]);
-            // console.log(answer[3]);
-
-            // console.log("hello");
           
             let answer;
         
@@ -115,24 +133,24 @@ const [quote, setQuote] = useState();
 
     <div className="game-options-container">
       <div className="options-row options-one">
-        <div className="game-option option-one">
+        <button type="submit" className="game-option option-one" onclick={rightOrWrong()}>
           <h3>{answer[0].[0]}</h3>
           <img src={answer[0].[1]} alt="random character from Breaking Bad for user to select from"/>
-        </div>
-        <div className="game-option option-two">
+        </button>
+        <button type="submit" className="game-option option-two" onclick={rightOrWrong()}>
           <h3>{answer[1].[0]}</h3>
           <img src={answer[1].[1]} alt="random character from Breaking Bad for user to select from"/>
-        </div>
+        </button>
       </div>
       <div className="options-row options-three">
-        <div className="game-option option-one">
+        <button type="submit" className="game-option option-one" onclick={rightOrWrong()}>
           <h3>{answer[2].[0]}</h3>
           <img src={answer[2].[1]} alt="random character from Breaking Bad for user to select from"/>
-        </div>
-        <div className="game-option option-four">
+        </button>
+        <button type="submit" className="game-option option-four" onclick={rightOrWrong()}>
           <h3>{answer[3].[0]}</h3>
           <img src={answer[3].[1]} alt="random character from Breaking Bad for user to select from"/>
-        </div>
+        </button>
       </div>
     </div>
     </div>

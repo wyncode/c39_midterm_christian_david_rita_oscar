@@ -41,6 +41,11 @@ const styles = {
     flexDirection: 'row',
     width: 'fit-content',
   }
+  
+
+
+  
+
 
 }
 export default Carousel;

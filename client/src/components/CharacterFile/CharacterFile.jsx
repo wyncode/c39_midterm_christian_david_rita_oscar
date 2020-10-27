@@ -18,6 +18,8 @@ function CharacterFile(props) {
   });
   const [dataQuote, setDataQuote] = useState({});
 
+  console.log(useLocation().pathname);
+
   let characterID = Number(useLocation().pathname.slice(16));
   characterID > 0
     ? (characterID = characterID - 1)

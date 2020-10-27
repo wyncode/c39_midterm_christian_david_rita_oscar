@@ -27,25 +27,27 @@ const CharacterIndex = () => {
   const [state, setState] = useState(true);
 
   let seasonsFilter = [5];
-
-  // creat dop
+  let toInclude = [];
 
   const filterSeasons = () => {
+    toInclude = [];
     seasonsFilter.forEach((season) => {
-      // console.log(season);
       characterList.forEach((character) => {
         if (
           character.appearance !== null &&
           character.appearance.includes(season)
         ) {
-          console.log(`${season}: ${character.name}`);
+          toInclude.push(character);
         }
       });
     });
+    console.log(toInclude);
+    setCharacterList(toInclude);
+    setState(!state);
   };
 
-  filterSeasons();
-
+  // filterSeasons();
+  // setCharacterList(toInclude);
   const sortAToZ = () => {
     setCharacterList(characterList.sort((a, b) => (a.name > b.name ? 1 : -1)));
     setState(!state);
@@ -66,12 +68,15 @@ const CharacterIndex = () => {
     setCharacterList(charArray);
   }, []);
 
+  useEffect(() => {}, [state]);
+
   return (
     <div className="character-index-page-container">
       <h1>CharacterIndex Page</h1>
       <div className="buttons-container">
         <button onClick={() => sortAToZ()}>Sort A -> Z</button>
         <button onClick={() => sortZToA()}>Sort Z -> A</button>
+        <button onClick={() => filterSeasons()}>Season 5 only</button>
       </div>
 
       <div className="character-cards-container">

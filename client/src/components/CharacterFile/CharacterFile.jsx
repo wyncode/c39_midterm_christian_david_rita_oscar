@@ -5,11 +5,10 @@ import './CharacterFile.css';
 function CharacterFile(props) {
   const [dataFiles, setDataFiles] = useState({
     char_id: 56,
-    name: 'Officer Saxton',
+    name: '',
     birthday: 'Unknown',
     occupation: ['APD Officer'],
-    img:
-      'https://vignette.wikia.nocookie.net/breakingbad/images/f/f3/Officer_Saxton_-_I.F.T..png/revision/latest?cb=20131025090606',
+    img: '',
     status: 'Alive',
     nickname: 'Saxton',
     appearance: [3],
@@ -19,10 +18,31 @@ function CharacterFile(props) {
   });
   const [dataQuote, setDataQuote] = useState({});
 
+  console.log(useLocation().pathname);
+
   let characterID = Number(useLocation().pathname.slice(16));
   characterID > 0
     ? (characterID = characterID - 1)
     : (characterID = characterID);
+  console.log(characterID);
+  if (characterID == 111) {
+    characterID = 57;
+  }
+  if (characterID == 112) {
+    characterID = 58;
+  }
+  if (characterID == 113) {
+    characterID = 59;
+  }
+  if (characterID == 114) {
+    characterID = 60;
+  }
+  if (characterID == 115) {
+    characterID = 61;
+  }
+  if (characterID == 116) {
+    characterID = 62;
+  }
 
   // id = Number(id);
   // let id = location.pathname.splice(0, 16);
@@ -37,6 +57,7 @@ function CharacterFile(props) {
       .then((response) => response.json())
       .then((data) => {
         let characterObject = data[characterID];
+
         setDataFiles(characterObject);
       });
     // setDataFiles();
@@ -85,7 +106,7 @@ function CharacterFile(props) {
               <p id="name">Nickname: {dataFiles.nickname}</p>
               <p id="age">Status: {dataFiles.status}</p>
               <p id="deaths">Occupation: {dataFiles.occupation}</p>
-              <p id="description">Description: Who is who</p>
+              <p id="description"></p>
             </div>
           </div>
         </div>

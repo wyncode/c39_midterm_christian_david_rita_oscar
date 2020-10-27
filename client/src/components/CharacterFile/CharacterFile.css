@@ -1,3 +1,6 @@
+* {
+}
+
 .filecontainer {
   display: flex;
   flex-direction: column;
@@ -8,7 +11,9 @@
   margin-top: 200px;
   margin-bottom: 250px;
   height: 700px;
-  width: 1200px;
+  width: 1500px;
+  border: 7px;
+  border-radius: 15px;
 }
 
 .filecard {
@@ -17,35 +22,48 @@
   justify-content: space-around;
   align-content: space-between;
   margin: 0px;
-  padding: 30px;
-  width: 100%;
+  padding: 10px;
+  width: 1000px;
+  border: 5px solid black;
+  border-radius: 15px;
+  background-color: beige;
 }
 
 .carddata {
   background-color: beige;
   display: flex;
   justify-content: space-around;
-  border: 5px solid black;
 }
 
 .leftfilecard {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-}
-
-.rightfilecard {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 10px;
+  justify-content: center;
+  padding: 25px;
 }
 
 .characterdata {
   display: flex;
   justify-content: center;
-  align-content: space-around;
+  align-content: space-evenly;
+  height: 300px;
+  width: 900px;
+}
+
+img {
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  height: 250px;
+  width: 250px;
   border: 5px solid black;
+  border-radius: 15px;
+}
+
+.cardImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .quotecontainer {
@@ -70,6 +88,3 @@
   padding: 10px;
 }
 
-.cardImage {
-  background-color: coral;
-}

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './GameChoices.css';
 
-
 function GameChoices() {
+
 
   return ( <div><h1>Hello</h1></div>)
 // // const [image, setImage] = useState();
@@ -162,5 +162,3 @@ function GameChoices() {
 
 
 export default GameChoices;
-
-

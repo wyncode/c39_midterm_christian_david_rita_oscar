@@ -7,8 +7,6 @@ import GameStart from './components/LandingPage/Game/GameStart/GameStart';
 import AboutUs from './components/AboutUs/AboutUs';
 
 
-
-
 import './App.css';
 import CharacterFile from './components/CharacterFile/CharacterFile';
 
@@ -30,7 +28,11 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={FullHomePage} />
           <Route exact path="/characters" component={CharacterIndex} />
-          <Route exact path="/character-file" component={CharacterFile} />
+          <Route
+            exact
+            path="/character-file/:char_id"
+            component={CharacterFile}
+          />
           <Route exact path="/game-start" component={GameStart} />
           <Route exact path="/About-Us" component={AboutUs} />
         </Switch>{' '}

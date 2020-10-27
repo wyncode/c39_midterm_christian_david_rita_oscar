@@ -2,11 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import './CharacterIndex.css';
 import TestCharPage from './TestCharPage';
+import CharacterFile from '../../CharacterFile/CharacterFile';
 
 // handle Holly (remove from state variable before passing?) & handle "Ortgea"
 // serve error messages for 503s?
 // reduce delay when clicking sort by creating static array from api call then sorting that array instead of calling api every time sort is clicked
 // left-right scroll is auto-enabled?
+// fix overflow of image (e.g. hector and leonel salamanca overflow b/c title is two )
+// stacey appears twice (55 & 117)
+// creat if statements to account for characters whose ids are out of order
+// get rid of auto-0render walter before character index page loads
 
 const CharacterIndex = () => {
   const [character, setCharacter] = useState([
@@ -945,7 +950,7 @@ const CharacterIndex = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <div>
       <div class="character-index-page-container">
         <h1>CharacterIndex Page</h1>
         <div class="buttons-container">
@@ -956,7 +961,7 @@ const CharacterIndex = () => {
         <div class="character-cards-container">
           {character.map((character) => {
             return (
-              <a href=".characters/chow">
+              <a href={`/character-file/${character.char_id}`}>
                 <div className="character-card">
                   <h5>{character.name}</h5>
 
@@ -970,10 +975,9 @@ const CharacterIndex = () => {
             );
           })}
         </div>
-        <TestCharPage />
-        {/* <Route exact path="/characters/chow" component={TestCharPage}></Route> */}
       </div>
-    </BrowserRouter>
+      <CharacterFile characterObject={character[1]} />
+    </div> // temporary div to test characterfile as child
   );
 };
 

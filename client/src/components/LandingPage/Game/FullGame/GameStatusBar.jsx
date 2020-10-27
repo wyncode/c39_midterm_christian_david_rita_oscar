@@ -1,5 +1,6 @@
 import React from 'react';
 import './GameStatusBar.css';
+import GameChoices from "./GameChoices";
 
 function GameStatusBar() {
   return (

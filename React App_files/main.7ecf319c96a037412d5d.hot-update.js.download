@@ -1,0 +1,132 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/components/LandingPage/Game/GameStart/GameStart.jsx":
+/*!*****************************************************************!*\
+  !*** ./src/components/LandingPage/Game/GameStart/GameStart.jsx ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _GameStart_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameStart.css */ "./src/components/LandingPage/Game/GameStart/GameStart.css");
+/* harmony import */ var _GameStart_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_GameStart_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\srmwa\\Desktop\\wyncode\\c39_midterm_christian_david_rita_oscar\\client\\src\\components\\LandingPage\\Game\\GameStart\\GameStart.jsx";
+
+
+
+const GameStart = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "gamestart",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    class: "title",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 7
+    }
+  }, "Test Your Knowledge"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "startquiz",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 9
+    }
+  }, "Game Rules"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "rulesbox",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    class: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 13
+    }
+  }, "There is 4 characters. Click on the character the quote applies to."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 13
+    }
+  }, "Each player is only allowed 2 wrong answers"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }, "Try to reach the highest score!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, "If you need some review, hit the character index above", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "arrow",
+    src: "https://www.flaticon.com/svg/static/icons/svg/65/65387.svg",
+    alt: "arrow",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 15
+    }
+  }), ' ', "to refresh on your Breaking Bad!!!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "box",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    class: "startgame",
+    a: true,
+    href: "client\\src\\components\\LandingPage\\Game\\FullGame\\FullGame.jsx",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 11
+    }
+  }, "START"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (GameStart);
+
+/***/ })
+
+})
+//# sourceMappingURL=main.7ecf319c96a037412d5d.hot-update.js.map

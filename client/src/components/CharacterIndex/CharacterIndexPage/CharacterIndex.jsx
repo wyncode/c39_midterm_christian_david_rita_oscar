@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import './CharacterIndex.css';
+import TestCharPage from './TestCharPage';
 
-// create function to get character to render on page load
+// handle Holly (remove from state variable before passing?) & handle "Ortgea"
+// serve error messages for 503s?
+// reduce delay when clicking sort by creating static array from api call then sorting that array instead of calling api every time sort is clicked
+// left-right scroll is auto-enabled?
 
 const CharacterIndex = () => {
   const [character, setCharacter] = useState([
@@ -896,9 +901,8 @@ const CharacterIndex = () => {
       better_call_saul_appearance: []
     }
   ]); // setting initial state to array to be compatible with bracket notation in return statement
-  // const [state, setState] = useState(false);
 
-  const handleClick = async () => {
+  const sortAToZ = async () => {
     let response = await fetch('https://breakingbadapi.com/api/characters');
     response = await response.json();
     let charArray = [];
@@ -909,12 +913,25 @@ const CharacterIndex = () => {
         response[i]
       );
     }
-    // setCharacter(response[Math.floor(Math.random() * charArray.length)]);
+    charArray.sort((a, b) => (a.name > b.name ? 1 : -1));
+
     setCharacter(charArray);
   };
 
-  // set timeout to get image to render
-  // console.log(state);
+  const sortZToA = async () => {
+    let response = await fetch('https://breakingbadapi.com/api/characters');
+    response = await response.json();
+    let charArray = [];
+    for (let i = 0; i < response.length; i++) {
+      charArray.splice(
+        Math.floor(Math.random() * response.length),
+        0,
+        response[i]
+      );
+    }
+    charArray.sort((a, b) => (a.name > b.name ? -1 : 1));
+    setCharacter(charArray);
+  };
 
   useEffect(async () => {
     let response = await fetch('https://breakingbadapi.com/api/characters');
@@ -923,172 +940,41 @@ const CharacterIndex = () => {
     for (let i = 0; i < response.length; i++) {
       charArray.push(response[i]);
     }
-    // setCharacter(response[Math.floor(Math.random() * charArray.length)]);
+
     setCharacter(charArray);
   }, []);
 
   return (
-    <div>
-      <h1>CharacterIndex Page</h1>
-      {/* <div className="character-card">
-        <h3>{character[2].name}</h3>
+    <BrowserRouter>
+      <div class="character-index-page-container">
+        <h1>CharacterIndex Page</h1>
+        <div class="buttons-container">
+          <button onClick={() => sortAToZ()}>Sort A -> Z</button>
+          <button onClick={() => sortZToA()}>Sort Z -> A</button>
+        </div>
 
-        <img src={character[2].img} /> */}
+        <div class="character-cards-container">
+          {character.map((character) => {
+            return (
+              <a href=".characters/chow">
+                <div className="character-card">
+                  <h5>{character.name}</h5>
 
-      <div>
-        {character.map((character) => {
-          return (
-            <div>
-              <h5>{character.name}</h5>
-            </div>
-          );
-        })}
-        <button onClick={() => handleClick()}>Click Me</button>
-        {/* {async function fillArray() {
-            let response = await fetch(
-              'https://breakingbadapi.com/api/characters'
+                  <img
+                    class="character-image"
+                    src={character.img}
+                    alt={character.name}
+                  />
+                </div>
+              </a>
             );
-            response = await response.json();
-            let charArray = [];
-            for (let i = 0; i < response.length; i++) {
-              charArray.push(response[i]);
-            }
-
-            return <h1>hello</h1>;
-            // return the actual array as state to pass it down here?
-          }} */}
+          })}
+        </div>
+        <TestCharPage />
+        {/* <Route exact path="/characters/chow" component={TestCharPage}></Route> */}
       </div>
-    </div>
+    </BrowserRouter>
   );
 };
 
 export default CharacterIndex;
-
-// import React, { useState, useEffect } from 'react';
-// import { Form, Dropdown, ButtonGroup, Button, Card } from 'react-bootstrap';
-// import CharacterCard from '../CharacterCard/CharacterCard';
-// import CharacterIndexSearchBar from './CharacterIndexSearchBar';
-
-// const CharacterIndex = () => {
-
-//   const [apiData, setApiData] = useState({});
-//   const [state, setState] = useState(true);
-
-//   useEffect(() => {
-//     fetch('https://breakingbadapi.com/api/character/random')
-//       .then((response) => response.json())
-//       .then((response) => setApiData(response[0]));
-//   }, [state]);
-
-//   function switchCharacter() {
-//     setState(!state);
-//   }
-
-//   return (
-//     <div>
-//       <h1>Character Index Page Goes Here</h1>
-//       <Form>
-//         <Form.Label>Search by Name</Form.Label>
-//         <Form.Control
-//           className="character-search"
-//           type="text"
-//           placeholder="Search by name"
-//         />
-//       </Form>
-//       <div className="dropdowns">
-//         <Dropdown as={ButtonGroup}>
-//           <Button variant="success">Sort A -> Z</Button>
-
-//           <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
-
-//           <Dropdown.Menu>
-//             <Dropdown.Item href="#/action-1">A -> Z</Dropdown.Item>
-//             <Dropdown.Item href="#/action-2">Z -> A</Dropdown.Item>
-//           </Dropdown.Menu>
-//         </Dropdown>
-
-//         <Card style={{ width: '18rem' }} className="character-card">
-//           <Card.Img
-//             className="character-image"
-//             variant="top"
-//             src={apiData.img}
-//           />
-//           <Card.Body>
-//             <Card.Title>{apiData.name}</Card.Title>
-//             <Button variant="primary">Learn More</Button>
-//             <Button variant="primary" onClick={() => switchCharacter()}>
-//               Switch Character Test
-//             </Button>
-//           </Card.Body>
-//         </Card>
-//       </div>
-//     </div>
-//   );
-// };
-
-// call api to generate array of characters as JSON objects
-
-// render the characters on the page in random order (?)
-
-// create onClick functions for sort dropdowns to sort that array in warious ways, reset state to re-render characters
-// based on sort criterion
-
-// remove broken api characters
-
-// clear search bar after submit
-
-// const CharacterIndex = () => {
-// const [apiData, setApiData] = useState({});
-// const [state, setState] = useState(true);
-
-// const getAllCharacters = async function getAllCharacters() {
-//   let characters = await fetch('https://breakingbadapi.com/api/characters');
-//   characters = await characters.json();
-//   let allCharacters = characters.map((character) => character);
-// allCharacters.map((character) => console.log(character.name));
-// };
-// getAllCharacters();
-// useEffect(() => {
-//   fetch('https://breakingbadapi.com/api/character/random')
-//     .then((response) => response.json())
-//     .then((response) => setApiData(response[0]));
-// }, [state]);
-
-// function switchCharacter() {
-//   setState(!state);
-// }
-
-//   const [characterSearch, setCharacterSearch] = useState('Saul');
-//   const [apiData, setApiData] = useState({});
-
-//   function handleSearch(event) {
-//     event.preventDefault();
-//     setCharacterSearch(event.target.elements[0].value);
-//   }
-
-//   useEffect(() => {
-//     async function getCharacterData() {
-//       let response = await fetch(
-//         `https://breakingbadapi.com/api/characters?name=Walter` //interpolate variable
-//       );
-//       response = await response.json();
-//       setApiData(response);
-//       // console.log(apiData);
-//     }
-//     getCharacterData();
-//   }, [characterSearch]);
-
-//   return (
-//     <div>
-//       <CharacterIndexSearchBar handleSearchProp={handleSearch} />
-//       <CharacterCard
-//         name={characterSearch.name}
-//         imageURL={
-//           'https://images-na.ssl-images-amazon.com/images/I/61ec6C1F2yL._AC_SX466_.jpg'
-//         }
-//       />
-//     </div>
-//   );
-// };
-
-// export default CharacterIndex;

@@ -1,9 +1,11 @@
-.carousel {
+  .Carousel {
   height: 40rem;
-  width: 70rem;
   border: 2px solid black;
-  margin-top: 5rem;
+  margin-top: 10rem;
   border-radius: 50%;
-  /* no border radius keeps it square */
-}
+  }
+
+  .slide {
+    scroll-behavior: smooth;
+  }
 

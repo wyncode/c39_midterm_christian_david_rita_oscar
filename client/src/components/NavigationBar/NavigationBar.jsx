@@ -15,7 +15,11 @@ function NavigationBar() {
         </Nav.Item>
 
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-1">Meet the Team</Nav.Link>
+          <Nav.Link eventKey="link-1" 
+          className='About-Us'
+          href='/About-Us'
+          >
+            Meet the Team</Nav.Link>
         </Nav.Item>
 
         <Nav.Item as="li">

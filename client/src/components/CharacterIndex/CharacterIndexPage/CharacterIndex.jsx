@@ -12,6 +12,7 @@ import CharacterFile from '../../CharacterFile/CharacterFile';
 // stacey appears twice (55 & 117)
 // creat if statements to account for characters whose ids are out of order
 // get rid of auto-0render walter before character index page loads
+// pass the whole character array as props to CharacterFile? this would eliminate the load time and empty image
 
 // filter out characters that don't match user's selected season input
 
@@ -21,6 +22,7 @@ import CharacterFile from '../../CharacterFile/CharacterFile';
 // iterates over the API response array of full characters
 // for each character, if their "appearances" property contains the season, that character object should be added to a "toAppear" array
 // the "to Appear" should repalce the charArray as current state
+// the dropdown button should
 
 const CharacterIndex = () => {
   const [characterList, setCharacterList] = useState([]);
@@ -81,6 +83,7 @@ const CharacterIndex = () => {
 
       <div className="character-cards-container">
         {characterList.map((character) => {
+          //fixthis if (characterList[0].img)
           return (
             <a href={`/character-file/${character.char_id}`}>
               <div className="character-card">

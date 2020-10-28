@@ -947,7 +947,7 @@ const CharacterIndex = () => {
   return (
     <BrowserRouter>
       <div class="character-index-page-container">
-        <h1>CharacterIndex Page</h1>
+        <h1>Character Index Page</h1>
         <div class="buttons-container">
           <button onClick={() => sortAToZ()}>Sort A -> Z</button>
           <button onClick={() => sortZToA()}>Sort Z -> A</button>

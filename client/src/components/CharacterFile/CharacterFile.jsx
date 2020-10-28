@@ -372,13 +372,13 @@ function CharacterFile(props) {
         </div>
       </div>
       <div className="quotecontainer">
-        <div className="quotebox">
+        {/* <div className="quotebox">
           <h1>Quote</h1>
           <p>dkdkdkdkd</p>
         </div>
         <div>
           <button className="quotebutton">New Quote</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,12 +1,33 @@
-  .Carousel {
-  height: 40rem;
-  border: 2px solid black;
-  margin-top: 10rem;
-  border-radius: 50%;
-  
-  }
-
-  .slide {
+ .slide {
     scroll-behavior: smooth;
   }
+
+.landingpage {
+  display:flex;
+  justify-content: center;
+  width:100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15rem;
+}
+
+#myCarousel {
+ width: 30rem;
+ height: 40rem;
+ border-radius: 25%;
+ overflow: hidden;
+} 
+
+
+
+.homephoto {
+width: 100%;
+height: 100%;
+margin: auto;
+
+}
+
+
+ 
+  
 

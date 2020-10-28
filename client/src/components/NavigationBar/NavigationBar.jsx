@@ -5,10 +5,11 @@ import './NavigationBar.css';
 function NavigationBar() {
   return (
     <div className="navbarDiv">
+      <a href='https://www.imdb.com/title/tt0903747/'>
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0qLdwj8eQKfmKNAQCtwNdtFM1ZNpUUVYFrw&usqp=CAU"
         alt="logo"
-      />
+      /></a>
       <Nav className="navbar" defaultActiveKey="/home" as="ul">
         <Nav.Item as="li">
           <Nav.Link className='home' href="/">Home</Nav.Link>
@@ -20,16 +21,6 @@ function NavigationBar() {
           href='/About-Us'
           >
             Meet the Team</Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item as="li">
-          <Nav.Link
-            eventKey="link-2"
-            className="character-index"
-            href="/characters"
-          >
-            Character Index
-          </Nav.Link>
         </Nav.Item>
 
         <Nav.Item as="li">

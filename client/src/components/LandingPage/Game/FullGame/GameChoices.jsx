@@ -114,7 +114,6 @@ const [click, setClick] = useState(0)
 
   return (
     <div>
-      <h1>Test Your Knowledge</h1>
       <h3>Question</h3>
       <h5>Who said...</h5>
       <div className="game-status-bar">

@@ -1,7 +1,6 @@
 /*jshint esversion: 6 */
 
 import React, { useEffect, useState } from 'react';
-
 import './GameChoices.css';
 
 
@@ -78,28 +77,29 @@ const [score, setScore] = useState(0);
         console.log(event.currentTarget.innerText);
         if (event.currentTarget.innerText === name) {
           alert("Right!");
+          setTimeout(() => {
           setScore(score + 1);
           setCount(0);
-          setClick(click + 1)
+          setClick(click + 1);
+        }, 1000);
           // setTimeout(() => {
           // setNewQuote(!newQuote);
           // }, 3000);
         }
-          else {          
+          else {    
+            alert("Try again...") 
+            setTimeout(() => {     
             setCount(count + 1);
-            setClick(click + 1)
+            setClick(click + 1);
+          }, 1000);
             if (count === 3) {
-              alert("game over!");
-              window.location = '/game-start';
-              setCount(0);
-              setScore(0);
-            }
-
-            // setTimeout(() => {
-            //   setNewQuote(!newQuote);
-            // }, 3000);   
-          }  
-        };
+              alert("Game Over!");
+              window.location = '/game-start';}
+              // setCount(0);
+              // setScore(0);
+            }  
+          };  
+        
 
 
   return (
@@ -114,28 +114,24 @@ const [score, setScore] = useState(0);
           <span> {score}  </span>
         </div>
       </div>
-
+      {/* apply fallback image if you can get it to be based off of answer[i][1] */}
     <div className="game-options-container">
       <div className="options-row options-one">
-        <button className="game-option option-one" onClick={ handleAnswerOptionClick }
-        >
+        <button className="game-option option-one" onClick={ handleAnswerOptionClick }>
           <h3>{answer[0][0]}</h3>
           <img src={answer[0][1]} alt="random character from Breaking Bad for user to select from" />
-          </button>
-          <button type="submit" className="game-option option-two" onClick={ handleAnswerOptionClick }
-        >
+        </button>
+        <button type="submit" className="game-option option-two" onClick={ handleAnswerOptionClick }>
           <h3>{answer[1][0]}</h3>
           <img src={answer[1][1]} alt="random character from Breaking Bad for user to select from" />
         </button>
       </div>
       <div className="options-row options-three">
-        <button type="submit" className="game-option option-one" onClick={ handleAnswerOptionClick }
-        >
+        <button type="submit" className="game-option option-one" onClick={ handleAnswerOptionClick }>
           <h3>{answer[2].[0]}</h3>
-          <img src={answer[2][1]} alt="random character from Breaking Bad for user to select from" />
+          <img src={answer[2][1]} alt="random character from Breaking Bad for user to select from"  />
         </button>
-        <button type="submit" className="game-option option-four" onClick={ handleAnswerOptionClick }
-        >
+        <button type="submit" className="game-option option-four" onClick={ handleAnswerOptionClick }>
           <h3>{answer[3][0]}</h3>
           <img src={answer[3][1]} alt="random character from Breaking Bad for user to select from" />
         </button>

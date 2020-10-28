@@ -1,6 +1,3 @@
-body {
-}
-
 .game-options-container img {
   height: 30rem;
   width: 20rem;
@@ -34,3 +31,13 @@ button:hover {
   -ms-box-shadow: 3px 3px 50px 30px #ccc;
   box-shadow: 3px 3px 50px 30px #ccc;
 }
+
+.cc_image {
+  width: 256px;
+  height: 256px;
+}
+
+/* .cc_image.fallback .answer {
+  /* this URL here is theoretically a local one (always reachable) */
+/* background-image: url('https://www.hdwallpaper.nu/wp-content/uploads/2015/02/breaking-bad-typography-hd-wallpaper-1920x1080-10629.jpg');
+} */

@@ -4,7 +4,7 @@ import './NavigationBar.css';
 
 function NavigationBar() {
   return (
-    <div className="navbarDiv">
+    <div className="navbarDiv" id="myHeader">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0qLdwj8eQKfmKNAQCtwNdtFM1ZNpUUVYFrw&usqp=CAU"
         alt="logo"

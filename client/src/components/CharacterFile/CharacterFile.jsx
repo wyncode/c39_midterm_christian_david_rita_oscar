@@ -265,7 +265,7 @@ function CharacterFile(props) {
   let characterID = Number(useLocation().pathname.slice(16));
 
   characterID > 0
-    ? (characterID = characterID - 1)
+    ? (characterID = characterID)
     : (characterID = characterID);
 
 

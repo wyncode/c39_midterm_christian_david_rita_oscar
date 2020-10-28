@@ -1,5 +1,9 @@
 import React from 'react'
 import "./AboutUs.css"
+import christian from "../Images/christianb.jpg"
+import david from "../Images/david.jpg"
+import rita from "../Images/rita.jpg"
+import oscar from "../Images/oscar.jpg"
 
 const AboutUs =  () => {
   return (
@@ -7,32 +11,28 @@ const AboutUs =  () => {
       <h1>Meet The Team</h1>
       <ul class="the-team">
           <li>
-            <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="Image" />
-                  <h2>Christian Bonet</h2>
-                  <p>
-                    Programmer
-                  </p>
+            <a className='teammates'href='https://github.com/christianmbonet'>
+                <img src={christian} alt="Image" />
+                <p>Christian Bonet</p>
+            </a>
               </li>
               <li>
-                  <img src="https://randomuser.me/api/portraits/women/27.jpg" alt="Image" />
-                  <h2>David Ufberg</h2>
-                  <p>
-                    Programmer
-                  </p>
+                <a className='teammates' href='https://github.com/DavidUf11'>
+                <img src={david} alt="Image" />
+                  <p>David Ufberg</p>
+                </a>
               </li>
               <li>
-                  <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Image" />
-                  <h2>Oscar Portes</h2>
-                  <p>
-                    Programmer
-                  </p>
+                <a className='teammates' href='https://github.com/oscarporfer'>
+                  <img src={oscar} alt="Image" />
+                  <p>Oscar Portes</p>
+                </a>
               </li>
               <li>
-                  <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Image" />
-                  <h2>Rita Mwaikinda</h2>
-                  <p>
-                    Programmer
-                  </p>
+                <a className='teammates' href='https://github.com/ritamwaikinda'>
+                  <img src={rita} alt="Image" />
+                  <p>Rita Mwaikinda</p>
+                </a>
               </li>
           </ul>
       </div>

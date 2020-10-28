@@ -73,6 +73,7 @@ const CharacterIndex = () => {
   useEffect(() => {}, [state]);
 
   return (
+
     <div className="character-index-page-container">
       <h1>CharacterIndex Page</h1>
       <div className="buttons-container">
@@ -80,6 +81,7 @@ const CharacterIndex = () => {
         <button onClick={() => sortZToA()}>Sort Z -> A</button>
         <button onClick={() => filterSeasons()}>Season 5 only</button>
       </div>
+
 
       <div className="character-cards-container">
         {characterList.map((character) => {

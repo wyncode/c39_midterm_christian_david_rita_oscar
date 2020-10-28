@@ -8,6 +8,19 @@ function FullHomePage() {
     <div>
       <LandingPage />
       <FullGame />
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: 'fixed',
+          width: '100%',
+          objectFit: 'fill',
+          zIndex: '2'
+        }}
+      >
+        <source src="../../../IntroCredits.mov" type="video/mp4" />
+      </video>
     </div>
   );
 }

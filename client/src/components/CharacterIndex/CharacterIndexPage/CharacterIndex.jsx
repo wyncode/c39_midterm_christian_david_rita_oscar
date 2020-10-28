@@ -27,6 +27,7 @@ import CharacterFile from '../../CharacterFile/CharacterFile';
 const CharacterIndex = () => {
   const [characterList, setCharacterList] = useState([]);
   const [state, setState] = useState(true);
+  const [charactersFiltered, setCharactersFiltered] = useState([]);
 
   let seasonsFilter = [];
   let toInclude = [];
@@ -942,27 +943,34 @@ const CharacterIndex = () => {
         }
       ]
     ];
-    // sesonsfilter is just 1 number
+    // sesonsfilter is just 1 number;
 
-    toInclude = [];
+    // toInclude = [];
     // toExclude = [];
     // let loopVariable;
     // combinedArray.length > 0
     //   ? (loopVariable = combinedArray)
     //   : (loopVariable = characterList);
 
-    characterList.forEach((character) => {
-      if (character.appearance && character.appearance.includes(seasonNumber)) {
-        toInclude.push(character);
-      } /* else toExclude.push(character);*/
-    });
-    console.log(toInclude);
-    // console.log(toExclude);
+    // characterList.forEach((character) => {
+    //   if (character.appearance && character.appearance.includes(seasonNumber)) {
+    //     toInclude.push(character);
+    //   } /* else toExclude.push(character);*/
+    // });
+    // setCharacterList(allCharacters);
+
+    let results = characterList.filter(
+      (item) => item.appearance && item.appearance.includes(seasonNumber)
+    );
+
+    setCharactersFiltered(results);
+
     // combinedArray = toInclude.concat(toExclude);
 
-    setCharacterList(toInclude);
-    setState(!state);
+    // setState(!state);
   };
+  console.log('Results/charctersFiltered ', charactersFiltered);
+  console.log('charactList(full)', characterList);
 
   // filterSeasons();
   // setCharacterList(toInclude);
@@ -1015,7 +1023,7 @@ const CharacterIndex = () => {
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Dropdown
+            Filter by Season
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <button
@@ -1058,24 +1066,56 @@ const CharacterIndex = () => {
       </div>
 
       <div className="character-cards-container">
-        {characterList.map((character) => {
-          //fixthis if (characterList[0].img)
-          return (
-            <a id="card-link-tag" href={`/character-file/${character.char_id}`}>
-              <div id="character-card" className="card">
-                <h5 className="card-title">{character.name}</h5>
-                <img
-                  src={character.img}
-                  className="card-img-top"
-                  alt={character.name}
-                />
-              </div>
-            </a>
-          );
-        })}
+        {charactersFiltered.length === 0
+          ? characterList.map((character) => {
+              //fixthis if (characterList[0].img)
+              return (
+                <a
+                  id="card-link-tag"
+                  href={`/character-file/${character.char_id}`}
+                >
+                  <div id="character-card" className="card">
+                    <h5 className="card-title">{character.name}</h5>
+                    <img
+                      src={character.img}
+                      className="card-img-top"
+                      alt={character.name}
+                    />
+                  </div>
+                </a>
+              );
+            })
+          : charactersFiltered.map((character) => {
+              //fixthis if (characterList[0].img)
+              return (
+                <a
+                  id="card-link-tag"
+                  href={`/character-file/${character.char_id}`}
+                >
+                  <div id="character-card" className="card">
+                    <h5 className="card-title">{character.name}</h5>
+                    <img
+                      src={character.img}
+                      className="card-img-top"
+                      alt={character.name}
+                    />
+                  </div>
+                </a>
+              );
+            })}
       </div>
     </div>
   );
 };
 
 export default CharacterIndex;
+
+// charArray;
+
+// charArrCopy = charArr;
+
+// charcopy.filter;
+// return charcopy;
+
+// return;
+// arrcopy.map;

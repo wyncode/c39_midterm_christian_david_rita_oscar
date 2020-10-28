@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: 15rem;
 }
 
 .character-cards-container {
@@ -9,7 +11,6 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 60%;
-
 }
 
 .character-card {
@@ -86,7 +87,7 @@ button:active:before {
 } */
 .card {
   width: 20rem;
-  height: 28rem;
+  height: 29rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -97,19 +98,16 @@ button:active:before {
   border-radius: 10px;
 }
 
-.character-card {
-  border: 2px solid yellow;
-}
-
 .card-img-top {
   border-radius: 0;
   position: relative;
-  top: 3rem;
+  padding: 0;
+  /* top: 3rem; */
 }
 
 .card-title {
   position: relative;
-  top: 6rem;
+  /* top: 6rem; */
 }
 
 .card:hover {
@@ -119,7 +117,9 @@ button:active:before {
 
 .card h5 {
   color: #021402;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  position: relative;
+  bottom: 0.4rem;
 }
 
 #card-link-tag:hover {
@@ -132,35 +132,39 @@ button:active:before {
 
 .buttons-container {
   display: flex;
-  justify-content: space-evenly;
-  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+  width: 27%;
   z-index: 5;
+  margin: 2rem;
 }
 
-.alphabetical-sort {
+/* .alphabetical-sort {
   display: flex;
   width: 30%;
 
   justify-content: space-around;
-}
+} */
 
-.alphabetical-sort button {
+/* .alphabetical-sort button {
   margin: 6rem;
-}
+} */
 
 .buttons-container button {
-  background-color: hsla(250, 50%, 50%, 0);
+  background-color: hsla(100, 50%, 10%, 0);
   color: white;
   margin: 1rem;
   height: 4rem;
   width: 13rem;
   border-radius: 5px;
   font-size: 1.25rem;
+  transition: all 100ms ease-in 0ms;
 }
 
 .buttons-container button:hover {
-  background-color: hsla(100, 50%, 50%, 0.1);
+  background-color: hsla(100, 40%, 40%, 0.5);
   color: white;
+  transition: all 100ms ease-in 0ms;
 
   cursor: pointer;
 }
@@ -176,4 +180,18 @@ button:active:before {
   background-color: #021402;
   color: white;
   font-size: 1.25rem;
+}
+
+.dropdown-toggle {
+  /* border-top: 2.5px solid grey !important;
+  border-left: 2.5px solid grey !important;
+  border-bottom: 1px solid darkgrey !important;
+  border-right: 1px solid darkgrey !important; */
+}
+
+.dropdown-toggle:focus {
+  background-color: hsla(100, 40%, 40%, 0.5) !important;
+
+  /* color: white;
+  font-size: 1.25rem; */
 }

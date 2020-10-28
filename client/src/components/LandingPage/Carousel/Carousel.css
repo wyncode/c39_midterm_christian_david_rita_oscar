@@ -1,33 +1,34 @@
- .slide {
-    scroll-behavior: smooth;
-  }
+.slide {
+  scroll-behavior: smooth;
+}
 
 .landingpage {
-  display:flex;
+  display: flex;
   justify-content: center;
-  width:100%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   margin-top: 15rem;
+  overflow: hidden;
+  
 }
 
 #myCarousel {
- width: 30rem;
- height: 40rem;
- border-radius: 25%;
- overflow: hidden;
-} 
-
-
-
-.homephoto {
-width: 100%;
-height: 100%;
-margin: auto;
+  width: 30rem;
+  height: 40rem;
+  border-radius: 25px;
+  overflow: hidden;
+ 
 
 }
 
+.homephoto {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0
+}
 
- 
-  
-
+.carousel-control {
+  background-image: none);
+}

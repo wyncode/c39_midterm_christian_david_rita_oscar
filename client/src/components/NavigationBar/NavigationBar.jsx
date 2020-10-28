@@ -6,16 +6,20 @@ function NavigationBar() {
   return (
     <div className="navbarDiv">
       <img
-        src="https://banner2.cleanpng.com/20180420/wjq/kisspng-laboratory-flasks-erlenmeyer-flask-clip-art-5ada43f2def0c9.5368127515242536829132.jpg"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0qLdwj8eQKfmKNAQCtwNdtFM1ZNpUUVYFrw&usqp=CAU"
         alt="logo"
       />
       <Nav className="navbar" defaultActiveKey="/home" as="ul">
         <Nav.Item as="li">
-          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link className='home' href="/">Home</Nav.Link>
         </Nav.Item>
 
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-1">Meet the Team</Nav.Link>
+          <Nav.Link eventKey="link-1" 
+          className='About-Us'
+          href='/About-Us'
+          >
+            Meet the Team</Nav.Link>
         </Nav.Item>
 
         <Nav.Item as="li">

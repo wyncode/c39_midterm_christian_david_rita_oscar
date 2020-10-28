@@ -1,5 +1,7 @@
 .gamestart {
   padding: 50px;
+  background-color: rgb(11, 73, 11);
+  border-radius: 25px;
 }
 
 .title {
@@ -31,7 +33,7 @@ h2 {
   border-radius: 25px;
   font-family: sans-serif;
   padding: 20px;
-  color: black;
+  color:white;
   font-size: 20px;
 }
 
@@ -57,6 +59,9 @@ h2 {
   color: white;
   border: 3px solid black;
   width: 250px;
+  height:70px;
   border-radius: 25px;
   margin: 2rem;
+  
 }
+

@@ -4,7 +4,7 @@ import './GameStart.css';
 
 const GameStart = () => {
   return (
-    <div class="gamestart">
+    <div class="gamestarts">
       <h1 class="title">Test Your Knowledge</h1>
 
       <div class="startquiz">

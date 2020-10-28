@@ -5,7 +5,7 @@ import CharacterIndex from './components/CharacterIndex/CharacterIndexPage/Chara
 import FullHomePage from './components/FullHomePage/FullHomePage';
 import GameStart from './components/LandingPage/Game/GameStart/GameStart';
 import GameChoices from './components/LandingPage/Game/FullGame/GameChoices';
-
+import AboutUs from './components/AboutUs/AboutUs';
 
 
 import './App.css';
@@ -29,9 +29,14 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={FullHomePage} />
           <Route exact path="/characters" component={CharacterIndex} />
-          <Route exact path="/character-file" component={CharacterFile} />
+          <Route
+            exact
+            path="/character-file/:char_id"
+            component={CharacterFile}
+          />
           <Route exact path="/game-start" component={GameStart} />
           <Route exact path="/lets-play" component={GameChoices} />
+          <Route exact path="/About-Us" component={AboutUs} />
         </Switch>{' '}
       </BrowserRouter>
     </div>

@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import './GameChoices.css';
 
-
 function GameChoices() {
 const [image, setImage] = useState();
 const [name, setName] = useState();
@@ -72,8 +71,9 @@ const [click, setClick] = useState(0)
             }));
 
         },[click]);
+
           
-            let answer;
+             let answer;
         
             answer= [[name, image], [nameOne, imageOne], [nameTwo, imageTwo], [nameThree, imageThree]];
             // console.log(answer);
@@ -84,14 +84,6 @@ const [click, setClick] = useState(0)
             // console.log(answer[2]);
             // console.log(answer[3]);
 
-      // const handleAnswerOptionClick = (answer) => {
-      //   console.log(answer)
-      //   if (answer === randomAuthor){
-          
-      //     setNewQuote(!newQuote)
-      //   }
-        
-      // }
 
       const handleAnswerOptionClick 
       = (event) => 
@@ -119,27 +111,6 @@ const [click, setClick] = useState(0)
             
           }  
         };
-
-        //  else if {
-        // for (let i = 0; i < 4; i++) {
-        //     if (setCount === 3) {
-        //       alert("Game Over!!");
-        //       setTimeout(() => {
-        //       return (
-        //           <>
-        //           <GameStart />
-        //           </>
-        //       );}, 3000);} 
-        //     }
-        //   } else {
-        //     alert("Wrong...");
- 
-        //     catch {
-        //           setTimeout(() => {
-        //             setNewQuote(!newQuote);
-        //           }, 3000);
-        //          }
-        // } 
 
   return (
     <div>
@@ -184,113 +155,5 @@ const [click, setClick] = useState(0)
   );
   };
 
-  export default GameChoices;
-// 1. Take the value of the button that was clicked.
-// 2. 
+export default GameChoices;
 
-   // const [currentQuestion, setCurrentQuestion] = useState(0);
-      // const [showScore, setShowScore] = useState(false);
-      // const [score, setScore] = useState(0);
-    
-      // const handleAnswerOptionClick = (answer[0].[0] => {
-      //   if (answer[0].[0] = randomAuthor) {
-      //     setScore(score + 1);
-      //   }
-    
-      //   const nextQuestion = currentQuestion + 1;
-      //   if (nextQuestion < randomAuthor.length) {
-      //     setCurrentQuestion(nextQuestion);
-      //   } else {
-      //     setShowScore(true);
-      //   }
-      // }
-
-      // function sayHello() {
-      //   alert('You clicked me!');
-      // }
-      // // Usage
-      // <button onClick={sayHello}>Default</button>;
-
-      // function rightOrWrong() {
-      //   alert('You clicked me!');
-      //   }
-
-      //   function rightOrWrong() {
-      //     return 'You clicked me!';
-      //     }
-
-      //     var rightOrWrong() {
-      //       return 'You clicked me!';
-      //       }
-        
-      //   }
-      //   const handleClick = () => {
-      //     if (value === randomAuthor) {
-      //       console.log();
-      //     }
-        // }
-
-        // const handleClick = (value) => {
-        //   if (value === randomAuthor) {
-        //     console.log("is a match");
-        //   } else {
-        //     console.log("not a match");
-        //   }
-        // }
-        
-        // const [currentQuestion, setCurrentQuestion] = useState(0);
-        // const [showScore, setShowScore] = useState(false);
-        // const [score, setScore] = useState(0);
-      
-        // const handleAnswerOptionClick = (isCorrect) => {
-        //   if (isCorrect) {
-        //     setScore(score + 1);
-        //   }
-      
-        //   const nextQuestion = currentQuestion + 1;
-        //   if (nextQuestion < questions.length) {
-        //     setCurrentQuestion(nextQuestion);
-        //   } else {
-        //     setShowScore(true);
-        //   }
-        // };
-        // ________________________________
-
-        // rightOrWrong = () => {
-//   for(answer === randomAuthor){
-//       return correct = () => {
-//         // async?
-//         counter = () => {
-//           (let i=0; i<2; i++)
-//           i++;} &&
-//         //await?
-//         secondQuestion = () => {
-
-            // setQuote()
-//         }
-//         //counter ++
-  
-        // Now I've forgotten what I was doing
-
-//     //if counter = 2
-  // send to start page again
-    // }
-//   };
-// };
-
-// grepper
-//   const isLoggedIn = this.state.isLoggedIn;
-//   return (
-//     <div>
-//       The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.    
-// 	</div>
-//   );
-// }
-
-
-
-// async function Do() {
-	// read
-  	// await setTimeout(resolve, 3000);
-    // reads next 3s
-  // }

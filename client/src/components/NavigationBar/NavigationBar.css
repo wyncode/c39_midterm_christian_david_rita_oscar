@@ -218,6 +218,7 @@
 .About-Us:hover, .About-Us:focus, .About-Us:active {
   color: white;
 }
+
 .About-Us:hover:before, .About-Us:focus:before, .About-Us:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);

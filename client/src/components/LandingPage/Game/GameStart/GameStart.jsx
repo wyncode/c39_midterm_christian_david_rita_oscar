@@ -30,7 +30,7 @@ const GameStart = () => {
           </ol>
         </div>
         <div class="box">
-          <a href="./LandingPage/Game/FullGame/FullGame" class="startgame" >START</a>
+          <a href="/lets-play" class="startgame" >START</a>
         </div>
       </div>
     </div>

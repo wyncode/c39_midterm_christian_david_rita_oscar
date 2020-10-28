@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 import React, { useEffect, useState } from 'react';
 import './GameChoices.css';
 import GameStart from './GameStart/GameStart';
@@ -68,39 +70,39 @@ function GameChoices() {
     return 0.5 - Math.random();
   });
 
-  // const handleAnswerOptionClick = (answer) => {
-  //   console.log(answer);
-  //   if (answer === randomAuthor) {
-  //     alert("Right!");
-  //     setCount(0);
-  //     // set timeout 3 seconds
-  //     setTimeout(() => {
-  //       setNewQuote(!newQuote);
-  //     }, 3000);
-  //   } else {
-  //       alert("Wrong...");
-  //       setCount(count + 1);
-  //       // set timeout 3 seconds
-  //       setTimeout(() => {
-  //         setNewQuote(!newQuote);
-  //       }, 3000);
-  //       for (let i = 0; i < 4; i++) {
-  //           if (setCount === 3) {
-  //               alert("Game Over!!");
-  //               // set timeout 3 seconds
-  //               setTimeout(() => {
-  //               return (
-  //                   <>
-  //                   <GameStart />
-  //                   </>
-  //               );
-  //             }, 3000);
-  //            } catch {
-  //             setTimeout(() => {
-  //               setNewQuote(!newQuote);
-  //             }, 3000);
-  //            }
-  //   } 
+  const handleAnswerOptionClick = (answer) => {
+    console.log(answer);
+    if (answer === randomAuthor) {
+      alert("Right!");
+      setCount(0);
+      // set timeout 3 seconds
+      setTimeout(() => {
+        setNewQuote(!newQuote);
+      }, 3000);
+    } else {
+        alert("Wrong...");
+        setCount(count + 1);
+        // set timeout 3 seconds
+        setTimeout(() => {
+          setNewQuote(!newQuote);
+        }, 3000);
+        for (let i = 0; i < 4; i++) {
+            if (setCount === 3) {
+                alert("Game Over!!");
+                // set timeout 3 seconds
+                setTimeout(() => {
+                return (
+                    <>
+                    <GameStart />
+                    </>
+                );
+              }, 3000);
+             } catch {
+              setTimeout(() => {
+                setNewQuote(!newQuote);
+              }, 3000);
+             }
+    } 
 
     // const GameOver = ({ handleAnswerOptionClick }) => {
     //     console.log(answer);

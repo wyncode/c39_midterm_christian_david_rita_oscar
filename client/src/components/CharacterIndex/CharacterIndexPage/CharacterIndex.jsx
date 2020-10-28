@@ -981,7 +981,17 @@ const CharacterIndex = () => {
     response = await response.json();
     let charArray = [];
     for (let i = 0; i < response.length; i++) {
-      charArray.push(response[i]);
+      if (
+        response[i].char_id !== 39 &&
+        response[i].char_id !== 117 &&
+        response[i].char_id !== 112 &&
+        response[i].char_id !== 113 &&
+        response[i].char_id !== 114 &&
+        response[i].char_id !== 115 &&
+        response[i].char_id !== 116
+      ) {
+        charArray.push(response[i]);
+      }
     }
     setCharacterList(charArray);
   }, []);
@@ -992,9 +1002,10 @@ const CharacterIndex = () => {
       <h1>Characters</h1>
 
       <div className="buttons-container">
-        <button onClick={() => sortAToZ()}>Sort A -> Z</button>
-        <button onClick={() => sortZToA()}>Sort Z -> A</button>
-
+        <div className="alphabetical-sort">
+          <button onClick={() => sortAToZ()}>Sort A -> Z</button>
+          <button onClick={() => sortZToA()}>Sort Z -> A</button>
+        </div>
         <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"

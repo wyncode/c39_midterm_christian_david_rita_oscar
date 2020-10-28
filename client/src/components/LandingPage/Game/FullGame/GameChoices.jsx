@@ -1,7 +1,9 @@
 /*jshint esversion: 6 */
 
 import React, { useEffect, useState } from 'react';
+
 import './GameChoices.css';
+
 
 function GameChoices() {
 const [image, setImage] = useState();
@@ -16,7 +18,8 @@ const [quote, setQuote] = useState();
 const [newQuote, setNewQuote] = useState(false);
 const [refetch, setRefetch] = useState(false);
 const [count, setCount] = useState(0);
-const [click, setClick] = useState(0)
+const [click, setClick] = useState(0);
+const [score, setScore] = useState(0);
 
   let randomQuote;
   let randomAuthor;
@@ -30,26 +33,19 @@ const [click, setClick] = useState(0)
                 randomAuthor = data[0].author;
                 let stringArray = randomAuthor.split(" ");
                 author = stringArray[0]+"+"+stringArray[1];
-                // console.log(author);
-                // console.log(data[0].quote);
                 setQuote(data[0].quote);
                 fetch(`https://breakingbadapi.com/api/characters?name=${author}`)
                 .then((response) => response.json())
                 .then((data) => {
-                  // console.log(data[0].img);
                   setImage(data[0].img);
                   setName(data[0].name);
                   let name = data[0].name;
-                  // console.log(randomAuthor+"JJJJJJ");
-                  // console.log(name);
                 });
               
             })
             .then(fetch(`https://breakingbadapi.com/api/character/random`)
             .then((random) => random.json())
             .then((randomdata) => {
-              // console.log(randomdata[0].name);
-              // console.log(randomdata[0].img);
               setNameOne(randomdata[0].name);
               setImageOne(randomdata[0].img);
             }))
@@ -64,26 +60,16 @@ const [click, setClick] = useState(0)
             .then(fetch(`https://breakingbadapi.com/api/character/random`)
             .then((randomtwo) => randomtwo.json())
             .then((randomdatatwo) => {
-              // console.log(randomdatatwo[0].name);
-              // console.log(randomdatatwo[0].img);
               setNameThree(randomdatatwo[0].name);
               setImageThree(randomdatatwo[0].img);
             }));
 
         },[click]);
-
           
-             let answer;
+            let answer;
         
             answer= [[name, image], [nameOne, imageOne], [nameTwo, imageTwo], [nameThree, imageThree]];
-            // console.log(answer);
             answer.sort(function() { return 0.5 - Math.random(); });
-            // console.log(answer);
-            // console.log(answer[0]);
-            // console.log(answer[1]);
-            // console.log(answer[2]);
-            // console.log(answer[3]);
-
 
       const handleAnswerOptionClick 
       = (event) => 
@@ -92,25 +78,29 @@ const [click, setClick] = useState(0)
         console.log(event.currentTarget.innerText);
         if (event.currentTarget.innerText === name) {
           alert("Right!");
+          setScore(score + 1);
           setCount(0);
           setClick(click + 1)
-          setTimeout(() => {
-          setNewQuote(!newQuote);
-          }, 3000);}
+          // setTimeout(() => {
+          // setNewQuote(!newQuote);
+          // }, 3000);
+        }
           else {          
             setCount(count + 1);
             setClick(click + 1)
             if (count === 3) {
-              alert("game over!")
-              setCount(0)
+              alert("game over!");
+              window.location = '/game-start';
+              setCount(0);
+              setScore(0);
             }
 
-            setTimeout(() => {
-              setNewQuote(!newQuote);
-            }, 3000);
-            
+            // setTimeout(() => {
+            //   setNewQuote(!newQuote);
+            // }, 3000);   
           }  
         };
+
 
   return (
     <div>
@@ -121,7 +111,7 @@ const [click, setClick] = useState(0)
         <blockquote className="quote-box">"{quote}"</blockquote>
         <div className="score-box">
           <h5>Score:</h5>
-          <span> {count}  </span>
+          <span> {score}  </span>
         </div>
       </div>
 
@@ -155,5 +145,4 @@ const [click, setClick] = useState(0)
   );
   };
 
-export default GameChoices;
-
+  export default GameChoices;

@@ -4,17 +4,9 @@ import './CharacterFile.css';
 
 function CharacterFile(props) {
   const [dataFiles, setDataFiles] = useState({
-    char_id: 56,
     name: '',
-    birthday: 'Unknown',
-    occupation: ['APD Officer'],
-    img: '',
-    status: 'Alive',
-    nickname: 'Saxton',
-    appearance: [3],
-    portrayed: 'Stoney Westmoreland',
-    category: 'Breaking Bad',
-    better_call_saul_appearance: []
+
+    img: ''
   });
   const [dataQuote, setDataQuote] = useState({});
   
@@ -270,13 +262,13 @@ function CharacterFile(props) {
     },
   ]
 
-  console.log(useLocation().pathname);
-
   let characterID = Number(useLocation().pathname.slice(16));
-  // characterID > 0
-  //   ? (characterID = characterID - 1)
-  //   : (characterID = characterID);
-  console.log(characterID);
+
+  characterID > 0
+    ? (characterID = characterID - 1)
+    : (characterID = characterID);
+
+
   if (characterID == 111) {
     characterID = 57;
   }

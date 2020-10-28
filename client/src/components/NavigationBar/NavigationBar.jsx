@@ -4,8 +4,9 @@ import './NavigationBar.css';
 
 function NavigationBar() {
   return (
-    <div className="navbarDiv">
-      <a href='https://www.imdb.com/title/tt0903747/'>
+
+    <div className="navbarDiv" id="myHeader">
+
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0qLdwj8eQKfmKNAQCtwNdtFM1ZNpUUVYFrw&usqp=CAU"
         alt="logo"

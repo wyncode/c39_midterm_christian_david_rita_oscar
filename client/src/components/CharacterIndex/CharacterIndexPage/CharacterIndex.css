@@ -9,7 +9,6 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 60%;
-  border: 2px solid blue;
 }
 
 .character-card {
@@ -25,7 +24,7 @@
   align-items: center;
 }
 
-.buttons-container {
+/* .buttons-container {
   display: flex;
   justify-content: space-evenly;
   width: 60%;
@@ -33,14 +32,13 @@
 }
 
 button {
-  border: 2px solid white;
   border-radius: 12px;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
+  /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
+/* -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -49,11 +47,13 @@ button {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   padding: 8px 15px;
-  color:white;
+  color: white;
+  background-color: hsla(250, 50%, 50%, 0);
   text-decoration: none;
-}
-button:before {
-  content: "";
+} */
+
+/* button:before {
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -73,20 +73,61 @@ button:before {
   transition-timing-function: ease-out;
   border-radius: 12px;
 }
-button:hover, button:focus, button:active {
-  color: white;
+button:hover,
+button:focus,
+button:active {
 }
-button:hover:before, button:focus:before, button:active:before {
+button:hover:before,
+button:focus:before,
+button:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
-}
-
-.character-image {
-  padding: 0.25rem;
+} */
+.card {
+  width: 20rem;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1.5rem;
+  transition: all 150ms ease-in 0ms;
+  box-shadow: 0 0 0 white;
   border-radius: 10px;
 }
 
-.character-card img {
-  height: 90%;
-  width: 90%;
+.character-card {
+  border: 2px solid yellow;
+}
+
+.card-img-top {
+  border-radius: 0;
+  position: relative;
+  top: 3rem;
+}
+
+.card-title {
+  position: relative;
+  top: 6rem;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 7px white;
+  transition: all 150ms ease-in 0ms;
+}
+
+.card h5 {
+  color: #021402;
+  font-size: 1.5rem;
+}
+
+#card-link-tag:hover {
+  text-decoration: none;
+}
+
+.buttons-container {
+  border: 2px solid lightblue;
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
 }

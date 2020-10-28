@@ -2,7 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  background-image:url('https://www.desktopbackground.org/download/1920x1080/2010/07/21/51793_breaking-bad-smoke-backgrounds_2448x2448_h.jpg');
+  /* background-image:url('https://www.desktopbackground.org/download/1920x1080/2010/07/21/51793_breaking-bad-smoke-backgrounds_2448x2448_h.jpg'); */
+
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -37,12 +38,12 @@
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   padding: 8px 15px;
-  color:white;
-  text-decoration: none;  
+  color: white;
+  text-decoration: none;
   margin-right: 10px;
 }
 .home:before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -62,10 +63,14 @@
   transition-timing-function: ease-out;
   border-radius: 12px;
 }
-.home:hover, .home:focus, .home:active {
+.home:hover,
+.home:focus,
+.home:active {
   color: white;
 }
-.home:hover:before, .home:focus:before, .home:active:before {
+.home:hover:before,
+.home:focus:before,
+.home:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
@@ -87,13 +92,12 @@
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   padding: 8px 15px;
-  color:white;
+  color: white;
   text-decoration: none;
   margin-right: 10px;
-  
 }
 .character-index:before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -113,15 +117,17 @@
   transition-timing-function: ease-out;
   border-radius: 12px;
 }
-.character-index:hover, .character-index:focus, .character-index:active {
+.character-index:hover,
+.character-index:focus,
+.character-index:active {
   color: white;
 }
-.character-index:hover:before, .character-index:focus:before, .character-index:active:before {
+.character-index:hover:before,
+.character-index:focus:before,
+.character-index:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
-
-
 
 .gamestart {
   border: 2px solid white;
@@ -140,11 +146,11 @@
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   padding: 8px 15px;
-  color:white;
-  text-decoration: none;  
+  color: white;
+  text-decoration: none;
 }
 .gamestart:before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -164,13 +170,16 @@
   transition-timing-function: ease-out;
   border-radius: 12px;
 }
-.gamestart:hover, .gamestart:focus, .gamestart:active {
+.gamestart:hover,
+.gamestart:focus,
+.gamestart:active {
   color: white;
 }
-.gamestart:hover:before, .gamestart:focus:before, .gamestart:active:before {
+.gamestart:hover:before,
+.gamestart:focus:before,
+.gamestart:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
-
 }
 
 .About-Us {
@@ -190,12 +199,12 @@
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   padding: 8px 15px;
-  color:white;
+  color: white;
   text-decoration: none;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 .About-Us:before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -215,12 +224,15 @@
   transition-timing-function: ease-out;
   border-radius: 12px;
 }
-.About-Us:hover, .About-Us:focus, .About-Us:active {
+.About-Us:hover,
+.About-Us:focus,
+.About-Us:active {
   color: white;
 }
 
-.About-Us:hover:before, .About-Us:focus:before, .About-Us:active:before {
+.About-Us:hover:before,
+.About-Us:focus:before,
+.About-Us:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
-
 }

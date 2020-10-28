@@ -5,6 +5,7 @@
   background-image:url('https://www.desktopbackground.org/download/1920x1080/2010/07/21/51793_breaking-bad-smoke-backgrounds_2448x2448_h.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding-right: 4rem;
 }
 
 .navbarDiv img {
@@ -12,13 +13,10 @@
   width: 90px;
   position: absolute;
   left: 10px;
+  border: 2px solid white;
+  
 }
 
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  /* border: 2px solid black; */
-}
 
 .home {
   border: 2px solid white;
@@ -38,8 +36,8 @@
   transition-duration: 0.3s;
   padding: 8px 15px;
   color:white;
-  text-decoration: none;  
-  margin-right: 10px;
+  text-decoration: none;
+  margin-right: 1rem;  
 }
 .home:before {
   content: "";
@@ -66,57 +64,6 @@
   color: white;
 }
 .home:hover:before, .home:focus:before, .home:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-}
-
-.character-index {
-  border: 2px solid white;
-  border-radius: 12px;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  padding: 8px 15px;
-  color:white;
-  text-decoration: none;
-  margin-right: 10px;
-  
-}
-.character-index:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2a6322;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  border-radius: 12px;
-}
-.character-index:hover, .character-index:focus, .character-index:active {
-  color: white;
-}
-.character-index:hover:before, .character-index:focus:before, .character-index:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
@@ -192,7 +139,7 @@
   padding: 8px 15px;
   color:white;
   text-decoration: none;
-  margin-right: 10px; 
+  margin-right: 1rem;
 }
 .About-Us:before {
   content: "";

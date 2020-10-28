@@ -1,3 +1,7 @@
+.block {
+  padding-top: 1rem;
+}
+
 .game-status-bar {
   width: 60rem;
   display: flex;

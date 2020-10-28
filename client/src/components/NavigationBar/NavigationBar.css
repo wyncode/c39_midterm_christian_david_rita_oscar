@@ -6,6 +6,7 @@
 
   background-repeat: no-repeat;
   background-size: cover;
+  padding-right: 4rem;
 }
 
 .navbarDiv img {
@@ -13,13 +14,10 @@
   width: 90px;
   position: absolute;
   left: 10px;
+  border: 2px solid white;
+  
 }
 
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  /* border: 2px solid black; */
-}
 
 .home {
   border: 2px solid white;
@@ -38,9 +36,11 @@
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   padding: 8px 15px;
+
   color: white;
   text-decoration: none;
   margin-right: 10px;
+
 }
 .home:before {
   content: '';
@@ -74,6 +74,7 @@
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
+
 
 .character-index {
   border: 2px solid white;
@@ -128,6 +129,7 @@
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
+
 
 .gamestart {
   border: 2px solid white;
@@ -201,7 +203,9 @@
   padding: 8px 15px;
   color: white;
   text-decoration: none;
+
   margin-right: 10px;
+
 }
 .About-Us:before {
   content: '';

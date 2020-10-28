@@ -322,19 +322,7 @@ function CharacterFile(props) {
 
   let characterID = Number(useLocation().pathname.slice(16));
 
-  if (characterID == 112) {
-    characterID = 58;
-    // } else if (characterID == 112) {
-    //   characterID = 58;
-    // } else if (characterID == 113) {
-    //   characterID = 59;
-    // } else if (characterID == 114) {
-    //   characterID = 60;
-    // } else if (characterID == 115) {
-    //   characterID = 61;
-    // } else if (characterID == 116) {
-    //   characterID = 62;
-  }
+
 
   console.log(characterID);
 

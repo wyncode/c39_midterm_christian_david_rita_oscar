@@ -1,52 +1,10 @@
+/*jshint esversion: 6 */
+
 import React, { useEffect, useState } from 'react';
 import './GameChoices.css';
 
 
 function GameChoices() {
-
-
-
-// rightOrWrong = () => {
-//   for(answer === randomAuthor){
-//       return correct = () => {
-//         // async?
-//         counter = () => {
-//           (let i=0; i<2; i++)
-//           i++;} &&
-//         //await?
-//         secondQuestion = () => {
-
-            // setQuote()
-//         }
-//         //counter ++
-  
-        // Now I've forgotten what I was doing
-
-//     //if counter = 2
-  // send to start page again
-    // }
-//   };
-// };
-
-// grepper
-//   const isLoggedIn = this.state.isLoggedIn;
-//   return (
-//     <div>
-//       The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.    
-// 	</div>
-//   );
-// }
-
-
-
-// async function Do() {
-	// read
-  	// await setTimeout(resolve, 3000);
-    // reads next 3s
-  // }
-
-
-
 const [image, setImage] = useState();
 const [name, setName] = useState();
 const [imageOne, setImageOne] = useState();
@@ -56,94 +14,123 @@ const [nameTwo, setNameTwo] = useState();
 const [imageThree, setImageThree] = useState();
 const [nameThree, setNameThree] = useState();
 const [quote, setQuote] = useState();
-const [newQuote, setNewQuote] = useState(false)
-const [randomAuthor, setRandomAuthor] = useState('')
-
+// const [newQuote, setNewQuote] = useState(false);
+const [refetch, setRefetch] = useState(false);
+// const [count, setCount] = useState(0);
 
   let randomQuote;
-  //let randomAuthor;
+  let randomAuthor;
   let author;
 
-    useEffect(() => {
-      fetch("https://breakingbadapi.com/api/quote/random")
-      .then((response) => response.json())
-      .then((data) => {
-          randomQuote = data[0].quote;
-           setRandomAuthor(data[0].author);
-           console.log(data[0].author)
-          let stringArray = randomAuthor.split(" ")
-          author = stringArray[0]+"+"+stringArray[1]
-          // console.log(author);
-          // console.log(data[0].quote);
-          setQuote(data[0].quote);
-          fetch(`https://breakingbadapi.com/api/characters?name=${randomAuthor}`)
-          .then((response) => response.json())
-          .then((data) => {
-          data.map(person => {
-            if (person.name === randomAuthor){
-              setName(person.name)
-              setImage(person.img)
-            }
-          })
-            // console.log(data[0].img);
-            // setImage(data[0].img);
-            // setName(data[0].name);
-          });
-        
-      })
-      .then(fetch(`https://breakingbadapi.com/api/character/random`)
-      .then((random) => random.json())
-      .then((randomdata) => {
-        // console.log(randomdata)
-        // console.log(randomdata[0].name);
-        // console.log(randomdata[0].img);
-        setNameOne(randomdata[0].name);
-        setImageOne(randomdata[0].img);
-      }))
+    useEffect(() =>
+    {        fetch("https://breakingbadapi.com/api/quote/random")
+            .then((response) => response.json())
+            .then((data) => {
+                randomQuote = data[0].quote;
+                randomAuthor = data[0].author;
+                let stringArray = randomAuthor.split(" ");
+                author = stringArray[0]+"+"+stringArray[1];
+                console.log(author);
+                console.log(data[0].quote);
+                setQuote(data[0].quote);
+                fetch(`https://breakingbadapi.com/api/characters?name=${author}`)
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log(data[0].img);
+                  setImage(data[0].img);
+                  setName(data[0].name);
+                });
+              
+            })
+            .then(fetch(`https://breakingbadapi.com/api/character/random`)
+            .then((random) => random.json())
+            .then((randomdata) => {
+              console.log(randomdata[0].name);
+              console.log(randomdata[0].img);
+              setNameOne(randomdata[0].name);
+              setImageOne(randomdata[0].img);
+            }))
 
-      .then(fetch(`https://breakingbadapi.com/api/character/random`)
-      .then((randomone) => randomone.json())
-      .then((randomdataone) => {
-        // console.log(randomdataone[0].name);
-        // console.log(randomdataone[0].img);
-        setNameTwo(randomdataone[0].name);
-        setImageTwo(randomdataone[0].img);
-      }))
+            .then(fetch(`https://breakingbadapi.com/api/character/random`)
+            .then((randomone) => randomone.json())
+            .then((randomdataone) => {
+              console.log(randomdataone[0].name);
+              console.log(randomdataone[0].img);
+              setNameTwo(randomdataone[0].name);
+              setImageTwo(randomdataone[0].img);
+            }))
 
-      .then(fetch(`https://breakingbadapi.com/api/character/random`)
-      .then((randomtwo) => randomtwo.json())
-      .then((randomdatatwo) => {
-        // console.log(randomdatatwo[0].name);
-        // console.log(randomdatatwo[0].img);
-        setNameThree(randomdatatwo[0].name);
-        setImageThree(randomdatatwo[0].img);
-      }));
+            .then(fetch(`https://breakingbadapi.com/api/character/random`)
+            .then((randomtwo) => randomtwo.json())
+            .then((randomdatatwo) => {
+              console.log(randomdatatwo[0].name);
+              console.log(randomdatatwo[0].img);
+              setNameThree(randomdatatwo[0].name);
+              setImageThree(randomdatatwo[0].img);
+            }));
 
-  },[newQuote]);
-    console.log("This is the random author",randomAuthor)
-    console.log('This is the correct answer', name)
-      let answer;
-  
-      answer= [[name, image], [nameOne, imageOne], [nameTwo, imageTwo], [nameThree, imageThree]];
-      // console.log(answer);
-      answer.sort(function() { return 0.5 - Math.random() });
-      // console.log(answer);
-      // console.log(answer[0]);
-      // console.log(answer[1]);
-      // console.log(answer[2]);
-      // console.log(answer[3]);
-
-      // console.log("hello");
-
-      // console.log(answer[0])
-      const handleAnswerOptionClick = (answer) => {
-        console.log(answer)
-        if (answer === randomAuthor){
+        },[]);
           
-          setNewQuote(!newQuote)
-        }
+            let answer;
         
-      }
+            answer= [[name, image], [nameOne, imageOne], [nameTwo, imageTwo], [nameThree, imageThree]];
+            console.log(answer);
+            answer.sort(function() { return 0.5 - Math.random(); });
+            console.log(answer);
+            console.log(answer[0]);
+            console.log(answer[1]);
+            console.log(answer[2]);
+            console.log(answer[3]);
+
+      // const handleAnswerOptionClick = (answer) => {
+      //   console.log(answer)
+      //   if (answer === randomAuthor){
+          
+      //     setNewQuote(!newQuote)
+      //   }
+        
+      // }
+
+
+      const handleAnswerOptionClick = (answer) => {
+        const [newQuote, setNewQuote] = useState(false);
+        const [count, setCount] = useState(0);
+        if (answer === randomAuthor) {
+          // alert("Right!");
+          setCount(0);
+          // set timeout 3 seconds
+          setTimeout(() => {
+            setNewQuote(!newQuote);
+          }, 3000);}};
+
+      console.log(handleAnswerOptionClick());
+        // } else if {
+        // for (let i = 0; i < 4; i++) {
+        //     if (setCount === 3) {
+        //       alert("Game Over!!");
+        //       // set timeout 3 seconds
+        //       setTimeout(() => {
+        //       return (
+        //           <>
+        //           <GameStart />
+        //           </>
+        //       );
+        //       }, 3000);
+        //       } 
+        //     }
+        //   } else {
+        //     alert("Wrong...");
+        //     setCount(count + 1);
+        //     // set timeout 3 seconds
+        //     setTimeout(() => {
+        //       setNewQuote(!newQuote);
+        //     }, 3000);
+        //     catch {
+        //           setTimeout(() => {
+        //             setNewQuote(!newQuote);
+        //           }, 3000);
+        //          }
+        // } 
 
   return (
     <div>
@@ -262,3 +249,43 @@ const [randomAuthor, setRandomAuthor] = useState('')
         //     setShowScore(true);
         //   }
         // };
+        // ________________________________
+
+        // rightOrWrong = () => {
+//   for(answer === randomAuthor){
+//       return correct = () => {
+//         // async?
+//         counter = () => {
+//           (let i=0; i<2; i++)
+//           i++;} &&
+//         //await?
+//         secondQuestion = () => {
+
+            // setQuote()
+//         }
+//         //counter ++
+  
+        // Now I've forgotten what I was doing
+
+//     //if counter = 2
+  // send to start page again
+    // }
+//   };
+// };
+
+// grepper
+//   const isLoggedIn = this.state.isLoggedIn;
+//   return (
+//     <div>
+//       The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.    
+// 	</div>
+//   );
+// }
+
+
+
+// async function Do() {
+	// read
+  	// await setTimeout(resolve, 3000);
+    // reads next 3s
+  // }

@@ -1,13 +1,15 @@
 import React from 'react';
 import LandingPage from '../LandingPage/LandingPage';
 import FullGame from '../LandingPage/Game/FullGame/FullGame';
+import CharacterIndex from '../CharacterIndex/CharacterIndexPage/CharacterIndex';
 import './FullHomePage.css';
 
 function FullHomePage() {
   return (
     <div>
       <LandingPage />
-      <FullGame />
+      {/* <FullGame /> */}
+      <CharacterIndex />
       <video
         autoPlay
         loop

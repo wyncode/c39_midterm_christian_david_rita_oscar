@@ -7,7 +7,6 @@ import GameStart from './components/LandingPage/Game/GameStart/GameStart';
 import GameChoices from './components/LandingPage/Game/FullGame/GameChoices';
 import AboutUs from './components/AboutUs/AboutUs';
 
-
 import './App.css';
 import CharacterFile from './components/CharacterFile/CharacterFile';
 

@@ -22,7 +22,7 @@
   transition: all 750ms ease-out 0s;
 }
 
-button:hover {
+/* button:hover {
   color: yellow;
   transform: scale(1.1);
   -moz-box-shadow: 3px 3px 50px 30px #ccc;
@@ -30,8 +30,6 @@ button:hover {
   -o-box-shadow: 3px 3px 50px 30px #ccc;
   -ms-box-shadow: 3px 3px 50px 30px #ccc;
   box-shadow: 3px 3px 50px 30px #ccc;
-}
-
 
 .cc_image {
   width: 256px;

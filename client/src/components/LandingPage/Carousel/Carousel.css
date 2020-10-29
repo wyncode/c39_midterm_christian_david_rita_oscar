@@ -18,7 +18,8 @@
   height: 40rem;
   border-radius: 25px;
   overflow: hidden;
- 
+ position: absolute;
+ top: 24rem
 
 }
 

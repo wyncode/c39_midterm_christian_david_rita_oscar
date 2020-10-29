@@ -13,12 +13,16 @@
   border-radius: 10px;
   overflow: hidden;
   transition: all 750ms ease-out 0s;
-  scale: 1;
 }
 .game-option:hover {
   border: 4px solid yellow;
   transition: all 750ms ease-out 0s;
-  scale: 1.1;
+  transform: scale(1.1);
+  -moz-box-shadow: 3px 3px 50px 30px #ccc;
+  -webkit-box-shadow: 3px 3px 50px 30px #ccc;
+  -o-box-shadow: 3px 3px 50px 30px #ccc;
+  -ms-box-shadow: 3px 3px 50px 30px #ccc;
+  box-shadow: 3px 3px 50px 30px #ccc;
 }
 
 .game-status-bar {

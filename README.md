@@ -1,66 +1,66 @@
-# Node / Create-React-App mashup
+###### c39_midterm_christian_david_rita_oscar
 
-Read the instructions thoroughly before starting your project.
+Hi - Welcome to The Felina Web Application
 
-## Setup
+## What
 
-- `git clone` this repo
-- `cd` into it.
-- `yarn install`
-- `cd client && yarn install`
+This web application is designed to be an entertaining, interactive resource for anyone who considers themselves to be a fan of the AMC Network TV show - Breaking Bad. This application provides users with statistics, context, and entertainment at the same time.
 
-## Available build commands
+## Status
 
-- `yarn dev`: Runs BOTH your Express.JS and React developer environment locally at the same time. Any logs coming from Express will be prefaced with `[0]`, any logs from `create-react-app` will be prefaced with `[1]`.
-- `yarn server`: Runs JUST your Express.JS server.
-- `yarn client`: Runs JUST your front-end React app.
+This project is in a fully functional status, 1.0.1. However, room for expansion is there.
+CHANGELOG.MD <a href="../c39_midterm_christian_david_rita_oscar/changelog.md">
 
-Open [http://localhost:3000](http://localhost:3000) to view your local React app in the browser. The page will reload if you make edits.
+## Screenshots
 
-## To deploy
+<img src="./client/src/components/Images/gamescreen.jpg">
+<img src="./client/src/components/Images/characterindex.jpg">
 
-NOTE: Heroku specifically runs `npm start`, so don't remove that from your package.json file.
+## Press
 
-- `heroku create your-app-name`
-- `git push heroku master`
+Virtual Midterm Press Conference - Wyncode Academy Tech 10/30/2020 12:10pm
 
-## Project Requirements
+## Why
 
-- [ ] Your project should pull data from an API. There are lots of options [here](https://github.com/toddmotto/public-apis) and [here](https://market.mashape.com/).
-  - Avoid any APIs that require OAuth (we'll talk about that later).
-  - Many APIs require an API key. Just sign up for an account and attach the key to your URL. Please make sure not to share your secret keys in a public GitHub repo.
-  - Some APIs don't allow _Cross-Origin Resource Sharing_ (CORS), meaning you can't make AJAX requests to them. You can get around this by proxying your requests with your Express server.
-- [ ] Your project should render a list of data from the API.
-  - [ ] Your project should allow the list to be filtered or searched.
-- [ ] Your project should show details about a single resource when clicked.
-- [ ] Your project should look (really) pretty!
-- [ ] You and your team should employ good Git and GitHub collaboration practices.
-- [ ] Your project must have a README.md file explaining what the project does and why it matters. [Here's an example](https://github.com/codeforamerica/howto/blob/master/Good-READMEs.md) of a great README.md template.
+This project as a work of passion. The developers were all huge fans of the TV show Breaking Bad and wanted to provide a character background and fun facts for anyone who visited their application. In developing application, the developers realize the potential for City and entertainment the fan site and decided to expand on both aspects.
 
-| Rubric Criterion                                                                         | Points |
-| ---------------------------------------------------------------------------------------- | ------ |
-| Ability to search or filter, use of React Router                                         | 10     |
-| Code formatting and quality: indentation, variable and file naming conventions, etc.     | 10     |
-| No unused variables or imports, compiler errors                                          | 10     |
-| Proper use of environment variables for API keys or CORS proxy if needed                 | 10     |
-| Overall look and feel of application, well organized CSS files                           | 10     |
-| Well written documentation                                                               | 10     |
-| Use of GitHub issues, branches and commit messages                                       | 10     |
-| Look and feel of demo slide deck                                                         | 10     |
-| Ability to explain code decisions in demo                                                | 10     |
-| Ability to defend code decisions in response to panel questions                          | 10     |
+## Who
 
-## Bonus
+Who We Are:
+Rita M. - 1st Year Developer (https://github.com/ritamwaikinda)
+David U. - 1st Year Developer (https://github.com/DavidUf11)
+Christian B. - 1st Year Developer (https://github.com/christianmbonet)
+Oscar U. - 1st Year Developer (https://github.com/oscarporfer)
 
-- Fanciful animations and transitions
-- Incorporate multiple APIs into a single app
+## How
 
-## Demo Requirements
+Dependencies:
+"dotenv": "^8.2.0",
+"nodemon": "^2.0.6",
+"prettier": "^2.1.2"
+"axios": "^0.21.0",
+Languages:
+HTML, CSS, JavaScript, React
+Frameworks:
+"bootstrap": "^4.5.3",
+"react": "^16.14.0",
+"react-bootstrap": "^1.4.0",
+"react-dom": "^16.14.0",
+"react-scripts": "3.4.3",
+"react-spring-3d-carousel": "^1.2.0"
 
-Create a slide deck for the technical panel. (Here's an [example](https://docs.google.com/presentation/d/15rfR-S5qAlzx4rHwBp_kJOlu0nQ7hcZOruTwbH6zRvQ/edit?usp=sharing).)
+## Contribute
 
-- It should focus on _how_ you built the app.
-- Include code snippets with brief explanations. Or, specific references to the location of the code in your GitHub repo.
-- It should emphasize your technical setbacks and solutions.
-- Get straight to the point.
-- Be prepared to answer questions.
+Ways you can contribute:
+**By installing and testing the software
+**By using the issue tracker for...
+-reporting bugs
+-suggesting new features
+-suggesting labels for our issues
+\*\*By improving the code through:
+-writing or editing documentation
+-writing test specifications
+-refactoring the code (no patch is too small: -fix typos, add comments, clean up -inconsistent whitespace).
+-reviewing open Pull Requests
+
+#### The End - Thank You

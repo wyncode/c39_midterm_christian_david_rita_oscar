@@ -8,8 +8,8 @@
   padding-right: 4rem;
 }
 .navbarDiv img {
-  height: 160px;
-  width: 160px;
+  height: 120px;
+  width: 120px;
   position: absolute;
   left: 10px;
   border: 2px solid white;
@@ -188,4 +188,14 @@
 .About-Us:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
+}
+
+.About-Us {
+  margin: 2.5rem;
+  margin-right: 3.5rem;
+  margin-left: 3.5rem;
+}
+
+.gamestart {
+  width: 19rem;
 }

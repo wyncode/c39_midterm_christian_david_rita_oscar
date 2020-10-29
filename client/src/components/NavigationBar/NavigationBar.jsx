@@ -5,10 +5,12 @@ import './NavigationBar.css';
 function NavigationBar() {
   return (
     <div className="navbarDiv" id="myHeader">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0qLdwj8eQKfmKNAQCtwNdtFM1ZNpUUVYFrw&usqp=CAU"
-        alt="logo"
-      />
+      <a href="/">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0qLdwj8eQKfmKNAQCtwNdtFM1ZNpUUVYFrw&usqp=CAU"
+          alt="logo"
+        />
+      </a>
       <Nav className="navbar" defaultActiveKey="/home" as="ul">
         <Nav.Item as="li">
           <Nav.Link className="home" href="/">
@@ -24,7 +26,7 @@ function NavigationBar() {
 
         <Nav.Item as="li">
           <Nav.Link eventKey="link-3" className="gamestart" href="/game-start">
-            Game Start
+            Test Your Knowledge
           </Nav.Link>
         </Nav.Item>
 

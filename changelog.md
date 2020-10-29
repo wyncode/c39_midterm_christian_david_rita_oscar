@@ -1,0 +1,71 @@
+- Merge pull request #29 from wyncode/david-08
+- Merge pull request #32 from wyncode/rita-09
+- Merge branch 'master' into rita-09
+- Merge branch 'master' into david-08
+- Merge pull request #31 from wyncode/oscar-07
+- Merge pull request #28 from wyncode/christian-11
+- final css edit
+- minor changes to about us page
+- moved CharIndex to home page; styled sort buttons
+- transitions smoothed
+- added dropdown for seasonSort functionality
+- updated about us page with images and links
+- Changed countdown of wrong answers to score-keeping of correct guesses. Game over function routes to Game Start. New bugs need to be resolved.
+- Merge pull request #25 from wyncode/rita-08
+- Merge pull request #23 from wyncode/christian-09
+- Merge branch 'master' into rita-08
+- GameChoices completed
+- Merge branch 'master' into christian-09
+- Merge pull request #24 from wyncode/oscar-05
+- Merge pull request #21 from wyncode/david-07
+- Merge branch 'master' into oscar-05
+- updated character file page
+- new Carousel Addition
+- minor performance changes to CharIndex
+- added description element to character file
+- At least it's working dynamically
+- Merge pull request #19 from wyncode/david-07
+- accomplished card filtering from 'only 5' button
+- fixed routing problem for char_ids that are out of order
+- completed function for filterring charList by seasons
+- fixed sorting functionality to sort from static array
+- Merge pull request #18 from wyncode/david-06
+- Merge branch 'master' into david-06
+- pushing for will
+- Merge pull request #16 from wyncode/oscar-05
+- linked CharIndex and CharFile
+- Carousel and About Me
+- Merge pull request #14 from wyncode/oscar-03
+- Merge pull request #13 from wyncode/rita-06
+- Merge pull request #11 from wyncode/christian-03
+- Merge pull request #10 from wyncode/david-05
+- Landing page Edit
+- CSS edits
+- verifying the user answers
+- beginning data passing between CharIndex and CharFile
+- updated CSS for character file and updated api fetch
+- added rendering of all chars
+- created randomizer for char state
+- randomized the position of the answers
+- minor css edits
+- Added names and photos to game. Moved GameStatusBar components into GameChoices
+- static array to render multiple cards
+- updated CharacterIndex page to include hooks
+- separated CharacterIndex into page/individual cards
+- Merge pull request #6 from wyncode/david-05
+- cleaned file tree; established routes for GameStart; l linked all CSS files with their JSX counterparts
+- Merge pull request #5 from wyncode/rita-03
+- url updated
+- saving changes #3
+- second manual merge
+- Merge branch 'rita-01' into master
+- Merge pull request #3 from wyncode/christian-01
+- Merge branch 'master' into christian-01
+- Merge pull request #2 from wyncode/david-03
+- game landing page jsx and css
+- updated app.jsx and created chracter file componenent
+- initial wireframes completed
+- Merge pull request #1 from wyncode/david-01
+- added routing
+- Initial commit
+  (END)

@@ -1,7 +1,7 @@
 .game-button {
-  margin-top: 6rem;
+  margin-top: 50rem;
   display: flex;
-  align-items: center; 
+  align-items: center;
   border: 2px solid white;
   border-radius: 12px;
   display: inline-block;
@@ -18,13 +18,19 @@
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   padding: 8px 15px;
-  color:white;
+  color: white;
   text-decoration: none;
-  width: 15rem;
-  height: 5rem;
+  width: 28rem;
+  height: 6rem;
+  /* font-size: 4rem; */
 }
+
+.game-button-div {
+  font-size: 1.25rem;
+}
+
 .game-button:before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -43,20 +49,25 @@
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   border-radius: 12px;
-  
 }
-.game-button:hover, .game-button:focus, .game-button:active {
+.game-button:hover,
+.game-button:focus,
+.game-button:active {
   color: white;
 }
-.game-button:hover:before, .game-button:focus:before, .game-button:active:before {
+.game-button:hover:before,
+.game-button:focus:before,
+.game-button:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: rgba(0, 0, 0, 0) !important; 
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: rgba(0, 0, 0, 0) !important;
   border-radius: 12px !important;
   border: 2px solid white !important;
   font-size: larger !important;
-
 }

@@ -23,21 +23,23 @@ const App = () => {
 
   return (
     <div id="demo">
-      <BrowserRouter>
-        <NavigationBar />
-        <Switch>
-          <Route exact path="/" component={FullHomePage} />
-          <Route exact path="/characters" component={CharacterIndex} />
-          <Route
-            exact
-            path="/character-file/:char_id"
-            component={CharacterFile}
-          />
-          <Route exact path="/game-start" component={GameStart} />
-          <Route exact path="/lets-play" component={GameChoices} />
-          <Route exact path="/About-Us" component={AboutUs} />
-        </Switch>{' '}
-      </BrowserRouter>
+      <React.StrictMode>
+        <BrowserRouter>
+          <NavigationBar />
+          <Switch>
+            <Route exact path="/" component={FullHomePage} />
+            <Route exact path="/characters" component={CharacterIndex} />
+            <Route
+              exact
+              path="/character-file/:char_id"
+              component={CharacterFile}
+            />
+            <Route exact path="/game-start" component={GameStart} />
+            <Route exact path="/lets-play" component={GameChoices} />
+            <Route exact path="/About-Us" component={AboutUs} />
+          </Switch>{' '}
+        </BrowserRouter>
+      </React.StrictMode>
     </div>
   );
 };

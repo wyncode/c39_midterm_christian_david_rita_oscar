@@ -1,28 +1,6 @@
 import React, { useEffect, useState } from 'react';
-// import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+
 import './CharacterIndex.css';
-// import TestCharPage from './TestCharPage';
-// import CharacterFile from '../../CharacterFile/CharacterFile';
-
-// handle Holly (remove from state variable before passing?) & handle "Ortgea"
-// serve error messages for 503s?
-// reduce delay when clicking sort by creating static array from api call then sorting that array instead of calling api every time sort is clicked
-// left-right scroll is auto-enabled?
-// fix overflow of image (e.g. hector and leonel salamanca overflow b/c title is two )
-// stacey appears twice (55 & 117)
-// creat if statements to account for characters whose ids are out of order
-// get rid of auto-0render walter before character index page loads
-// pass the whole character array as props to CharacterFile? this would eliminate the load time and empty image
-
-// filter out characters that don't match user's selected season input
-
-// give user dropdown button with options to check seasons, then click "apply".
-// "Apply" should submit a form that populates an array (fills empty array, or replaces array [1, 2, 3, 4, 5])
-// function should have a for loop that iterates over seasons array, and for each season, another for loop which
-// iterates over the API response array of full characters
-// for each character, if their "appearances" property contains the season, that character object should be added to a "toAppear" array
-// the "to Appear" should repalce the charArray as current state
-// the dropdown button should
 
 const CharacterIndex = () => {
   const [characterList, setCharacterList] = useState([]);
@@ -36,9 +14,8 @@ const CharacterIndex = () => {
     setCharactersFiltered(results);
   };
 
-  const CharacterCards = (loopVar) => {
+  function characterCards(loopVar) {
     return loopVar.map((character) => {
-      //fixthis if (characterList[0].img)
       return (
         <a id="card-link-tag" href={`/character-file/${character.char_id}`}>
           <div id="character-card" className="card">
@@ -52,6 +29,11 @@ const CharacterIndex = () => {
         </a>
       );
     });
+  }
+
+  const displayAllCharacters = () => {
+    characterCards(characterList);
+    console.log('displayallchars has run');
   };
 
   const sortAToZ = () => {
@@ -108,6 +90,13 @@ const CharacterIndex = () => {
             <button
               class="dropdown-item"
               type="button"
+              onClick={() => displayAllCharacters()}
+            >
+              See All Characters
+            </button>
+            <button
+              class="dropdown-item"
+              type="button"
               onClick={() => changeSeasonsFilter(1)}
             >
               Season 1
@@ -146,8 +135,8 @@ const CharacterIndex = () => {
 
       <div className="character-cards-container">
         {charactersFiltered.length === 0
-          ? CharacterCards(characterList)
-          : CharacterCards(charactersFiltered)}
+          ? characterCards(characterList)
+          : characterCards(charactersFiltered)}
       </div>
     </div>
   );

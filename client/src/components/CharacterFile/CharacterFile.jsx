@@ -330,13 +330,6 @@ function CharacterFile(props) {
 
   console.log(characterValue);
 
-  // id = Number(id);
-  // let id = location.pathname.splice(0, 16);
-
-  // let { char_id } = useParams;
-
-  // console.log(char_id); // wy print ing three timnes? does it matter? why undefined?
-
   useEffect(() => {
     // const dataPull = () => {
     fetch('https://breakingbadapi.com/api/characters')
@@ -346,35 +339,7 @@ function CharacterFile(props) {
 
         setDataFiles(characterObject);
       });
-    // setDataFiles();
-    // console.log(data[Math.floor(Math.random() * data.length)]);
-    // fetch('https://breakingbadapi.com/api/quote/random?author')
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     setDataQuote(data);
-    //     console.log(data);
   }, []);
-  // }, []);
-  // };
-  // , [];
-
-  // fetch("https://breakingbadapi.com/api/quote/random?author=Skyler+White")
-  //         .then((response) => response.json())
-  //         .then((data) => {
-  //             randomQuote = data[0].quote;
-  //             randomAuthor = data[0].author;
-  //             let stringArray = randomAuthor.split(" ")
-  //             author = stringArray[0]+"+"+stringArray[1]
-  //             console.log(author);
-  //             console.log(data[0].quote);
-  //             setQuote(data[0].quote);
-  //             fetch(`https://breakingbadapi.com/api/characters?name=${author}`)
-  //             .then((response) => response.json())
-  //             .then((data) => {
-  //               console.log(data[0].img);
-  //               setImage(data[0].img);
-  //               setName(data[0].name);
-  //             })
 
   function goBack() {
     window.history.back();

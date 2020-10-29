@@ -13,21 +13,30 @@
   border-radius: 10px;
   overflow: hidden;
   transition: all 750ms ease-out 0s;
+  scale: 1;
 }
 .game-option:hover {
   border: 4px solid yellow;
   transition: all 750ms ease-out 0s;
+  scale: 1.1;
 }
-/* .choice {
-  color: white;
-} */
+
 .game-status-bar {
   color: white;
-  border: 2px solid yellow;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 4rem;
 }
 .score-box {
   margin-right: 2rem;
 }
-#score {
+
+.score-number {
   font-size: 2rem;
+}
+
+.who-said {
+  margin-top: 10rem;
+  font-size: 3rem;
+  margin-bottom: 4rem;
 }

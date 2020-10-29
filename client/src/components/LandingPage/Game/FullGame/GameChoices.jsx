@@ -1,8 +1,6 @@
 /*jshint esversion: 6 */
-
 import React, { useEffect, useState } from 'react';
 import './GameChoices.css';
-
 function GameChoices() {
   const [image, setImage] = useState();
   const [name, setName] = useState();
@@ -18,7 +16,6 @@ function GameChoices() {
   const [count, setCount] = useState(0);
   const [click, setClick] = useState(0);
   const [score, setScore] = useState(0);
-
   let randomQuote;
   let randomAuthor;
   let author;
@@ -48,7 +45,6 @@ function GameChoices() {
             setImageOne(randomdata[0].img);
           })
       )
-
       .then(
         fetch(`https://breakingbadapi.com/api/character/random`)
           .then((randomone) => randomone.json())
@@ -57,7 +53,6 @@ function GameChoices() {
             setImageTwo(randomdataone[0].img);
           })
       )
-
       .then(
         fetch(`https://breakingbadapi.com/api/character/random`)
           .then((randomtwo) => randomtwo.json())
@@ -67,9 +62,7 @@ function GameChoices() {
           })
       );
   }, [click]);
-
   let answer;
-
   answer = [
     [name, image],
     [nameOne, imageOne],
@@ -79,40 +72,36 @@ function GameChoices() {
   answer.sort(function () {
     return 0.5 - Math.random();
   });
-
   const handleAnswerOptionClick = (event) => {
     event.preventDefault();
     console.log(event.currentTarget.innerText);
     if (event.currentTarget.innerText === name) {
       alert('Right!');
-
-      // setTimeout(() => {
-      // setNewQuote(!newQuote);
-      // }, 3000);
+      setScore(score + 1);
+      setCount(0);
+      setClick(click + 1);
     } else {
-      alert('Try again...');
-
+      alert('Wrong!');
+      setCount(count + 1);
+      setClick(click + 1);
       if (count === 3) {
         alert('Game Over!');
         window.location = '/game-start';
       }
-      // setCount(0);
-      // setScore(0);
     }
   };
-
   return (
     <div>
-      <h3>Question</h3>
-      <h5>Who said...</h5>
+      <h2 className="who-said">Who said...</h2>
       <div className="game-status-bar">
-        <blockquote className="quote-box">"{quote}"</blockquote>
+        <p className="quote-box">
+          <em>"{quote}"</em>
+        </p>
         <div className="score-box">
-          <h5>Score:</h5>
-          <span> {score} </span>
+          <h1>Score:</h1>
+          <span className="score-number"> {score} </span>
         </div>
       </div>
-      {/* apply fallback image if you can get it to be based off of answer[i][1] */}
       <div className="game-options-container">
         <div className="options-row options-one">
           <button
@@ -165,5 +154,4 @@ function GameChoices() {
     </div>
   );
 }
-
 export default GameChoices;

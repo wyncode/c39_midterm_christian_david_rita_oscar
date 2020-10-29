@@ -4,9 +4,9 @@ import './GameButton.css';
 
 function GameButton() {
   return (
-    <div>
+    <div className="game-button-div">
       <Button variant="primary" className="game-button">
-        Test Your Knowledge
+        Test Your Breaking Bad Knowledge
       </Button>{' '}
     </div>
   );

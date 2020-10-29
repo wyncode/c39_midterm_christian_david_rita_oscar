@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 15rem;
+  top: 20rem;
 }
 
 .character-cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 60%;
+  width: 80%;
 }
 
 .character-card {
@@ -26,65 +26,6 @@
   align-items: center;
 }
 
-/* .buttons-container {
-  display: flex;
-  justify-content: space-evenly;
-  width: 60%;
-  margin: 1rem;
-}
-
-button {
-  border-radius: 12px;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
-/* -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  padding: 8px 15px;
-  color: white;
-  background-color: hsla(250, 50%, 50%, 0);
-  text-decoration: none;
-} */
-
-/* button:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2a6322;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  border-radius: 12px;
-}
-button:hover,
-button:focus,
-button:active {
-}
-button:hover:before,
-button:focus:before,
-button:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-} */
 .card {
   width: 20rem;
   height: 29rem;
@@ -107,7 +48,6 @@ button:active:before {
 
 .card-title {
   position: relative;
-  /* top: 6rem; */
 }
 
 .card:hover {
@@ -138,17 +78,6 @@ button:active:before {
   z-index: 5;
   margin: 2rem;
 }
-
-/* .alphabetical-sort {
-  display: flex;
-  width: 30%;
-
-  justify-content: space-around;
-} */
-
-/* .alphabetical-sort button {
-  margin: 6rem;
-} */
 
 .buttons-container button {
   background-color: hsla(100, 50%, 10%, 0);
@@ -182,16 +111,6 @@ button:active:before {
   font-size: 1.25rem;
 }
 
-.dropdown-toggle {
-  /* border-top: 2.5px solid grey !important;
-  border-left: 2.5px solid grey !important;
-  border-bottom: 1px solid darkgrey !important;
-  border-right: 1px solid darkgrey !important; */
-}
-
 .dropdown-toggle:focus {
   background-color: hsla(100, 40%, 40%, 0.5) !important;
-
-  /* color: white;
-  font-size: 1.25rem; */
 }

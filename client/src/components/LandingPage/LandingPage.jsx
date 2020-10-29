@@ -16,7 +16,7 @@ function LandingPage() {
             position: 'absolute',
             width: '100%',
             left: '50%',
-            top: '45rem',
+            top: '44rem',
             height: '45rem',
             objectFit: 'cover',
             transform: 'translate(-50%, -50%)'
@@ -27,7 +27,7 @@ function LandingPage() {
       </div>
       <Carousel />
       <a href="/game-start">
-        <GameButton />
+        <GameButton className="game-button" />
       </a>
     </div>
   );

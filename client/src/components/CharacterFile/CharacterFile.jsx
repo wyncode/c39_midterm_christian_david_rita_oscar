@@ -322,8 +322,6 @@ function CharacterFile(props) {
 
   let characterID = Number(useLocation().pathname.slice(16));
 
-
-
   console.log(characterID);
 
   let characterValue = characterAboutArray.filter((character) => {
@@ -378,35 +376,47 @@ function CharacterFile(props) {
   //               setName(data[0].name);
   //             })
 
+  function goBack() {
+    window.history.back();
+  }
   return (
     <div className="filecontainer">
-      <div>
-        <h1>{dataFiles.name}</h1>
-      </div>
       <div className="filecard">
         <div className="cardImage">
-          <img src={dataFiles.img} alt="character"></img>
+          <img
+            className="characterImageProfile"
+            src={dataFiles.img}
+            alt="character"
+          ></img>
         </div>
         <div className="carddata">
           <div className="leftfilecard">
             <div id="characterdata">
-              <h1>About</h1>
-              <p id="name">Nickname: {dataFiles.nickname}</p>
-              <p id="age">Status: {dataFiles.status}</p>
-              <p id="deaths">Occupation: {dataFiles.occupation}</p>
-              <p id="description">Description: {characterValue.about}</p>
+              <div className="profileHeader">
+                <h1 className="profileSelector">{dataFiles.name}</h1>
+              </div>
+              <div className="profileDetails">
+                <p className="textSelector" id="name">
+                  Nickname: {dataFiles.nickname}
+                </p>
+                <p className="textSelector" id="portrayed">
+                  Portrated By: {dataFiles.portrayed}
+                </p>
+                <p className="textSelector" id="description">
+                  Description: {characterValue.about}
+                </p>
+                <p className="textSelector" id="status">
+                  Status: {dataFiles.status}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="quotecontainer">
-        {/* <div className="quotebox">
-          <h1>Quote</h1>
-          <p>dkdkdkdkd</p>
-        </div>
-        <div>
-          <button className="quotebutton">New Quote</button>
-        </div> */}
+      <div className="backButtonDiv">
+        <button className="backButton" onClick={goBack}>
+          Back
+        </button>
       </div>
     </div>
   );

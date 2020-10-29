@@ -2,42 +2,32 @@
   height: 30rem;
   width: 20rem;
 }
-
 .options-row {
   display: flex;
   width: 60rem;
   justify-content: space-around;
   margin-top: 1rem;
 }
-
 .game-option {
   border: 4px solid black;
   border-radius: 10px;
   overflow: hidden;
   transition: all 750ms ease-out 0s;
 }
-
 .game-option:hover {
   border: 4px solid yellow;
   transition: all 750ms ease-out 0s;
 }
-
-/* button:hover {
-  color: yellow;
-  transform: scale(1.1);
-  -moz-box-shadow: 3px 3px 50px 30px #ccc;
-  -webkit-box-shadow: 3px 3px 50px 30px #ccc;
-  -o-box-shadow: 3px 3px 50px 30px #ccc;
-  -ms-box-shadow: 3px 3px 50px 30px #ccc;
-  box-shadow: 3px 3px 50px 30px #ccc;
-
-.cc_image {
-  width: 256px;
-  height: 256px;
-}
-
-/* .cc_image.fallback .answer {
-  /* this URL here is theoretically a local one (always reachable) */
-/* background-image: url('https://www.hdwallpaper.nu/wp-content/uploads/2015/02/breaking-bad-typography-hd-wallpaper-1920x1080-10629.jpg');
+/* .choice {
+  color: white;
 } */
-
+.game-status-bar {
+  color: white;
+  border: 2px solid yellow;
+}
+.score-box {
+  margin-right: 2rem;
+}
+#score {
+  font-size: 2rem;
+}

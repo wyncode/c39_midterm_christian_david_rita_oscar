@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+// import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import './CharacterIndex.css';
-import TestCharPage from './TestCharPage';
-import CharacterFile from '../../CharacterFile/CharacterFile';
+// import TestCharPage from './TestCharPage';
+// import CharacterFile from '../../CharacterFile/CharacterFile';
 
 // handle Holly (remove from state variable before passing?) & handle "Ortgea"
 // serve error messages for 503s?
@@ -90,8 +90,8 @@ const CharacterIndex = () => {
 
       <div className="buttons-container">
         <div className="alphabetical-sort">
-          <button onClick={() => sortAToZ()}>Sort A -> Z</button>
-          <button onClick={() => sortZToA()}>Sort Z -> A</button>
+          <button onClick={() => sortAToZ()}>Sort A → Z</button>
+          <button onClick={() => sortZToA()}>Sort Z → A</button>
         </div>
         <div class="dropdown">
           <button

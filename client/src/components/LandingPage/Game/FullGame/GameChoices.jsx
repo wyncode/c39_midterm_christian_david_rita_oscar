@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 import React, { useEffect, useState } from 'react';
 import './GameChoices.css';
+import swal from 'sweetalert';
 function GameChoices() {
   const [image, setImage] = useState();
   const [name, setName] = useState();
@@ -8,7 +9,7 @@ function GameChoices() {
   const [nameOne, setNameOne] = useState();
   const [imageTwo, setImageTwo] = useState();
   const [nameTwo, setNameTwo] = useState();
-  const [imageThree, setImageThree] = useState();
+  const [imageThree, setImageThree] = useStatgit checkout ritae();
   const [nameThree, setNameThree] = useState();
   const [quote, setQuote] = useState();
   const [newQuote, setNewQuote] = useState(false);
@@ -76,16 +77,16 @@ function GameChoices() {
     event.preventDefault();
     console.log(event.currentTarget.innerText);
     if (event.currentTarget.innerText === name) {
-      alert('Right!');
+      swal('Right!');
       setScore(score + 1);
       setCount(0);
       setClick(click + 1);
     } else {
-      alert('Wrong!');
+      swal('Wrong!');
       setCount(count + 1);
       setClick(click + 1);
       if (count === 3) {
-        alert('Game Over!');
+        swal('Game Over!');
         window.location = '/game-start';
       }
     }

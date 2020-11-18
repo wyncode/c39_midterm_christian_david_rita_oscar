@@ -9,7 +9,7 @@ function GameChoices() {
   const [nameOne, setNameOne] = useState();
   const [imageTwo, setImageTwo] = useState();
   const [nameTwo, setNameTwo] = useState();
-  const [imageThree, setImageThree] = useStatgit checkout ritae();
+  const [imageThree, setImageThree] = useState();
   const [nameThree, setNameThree] = useState();
   const [quote, setQuote] = useState();
   const [newQuote, setNewQuote] = useState(false);
